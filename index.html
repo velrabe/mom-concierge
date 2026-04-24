@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Помощник для мам</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <header class="hero-nav" aria-label="Навигация">
+      <a class="brand-link" href="#top" aria-label="MamaTime">
+        <span class="brand-name">MamaTime</span>
+        <span class="brand-caption">помощник для мам</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Разделы">
+        <a class="nav-link" href="#steps">Как это работает</a>
+        <a class="nav-link" href="#question">Примеры вопросов</a>
+        <a class="nav-link" href="#pricing">Тарифы</a>
+        <a class="nav-link" href="#solution">О сервисе</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="nav-button nav-button--ghost" href="#question">Войти</a>
+        <a class="nav-button nav-button--primary" href="#pricing">Начать</a>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="section section--hero" id="top">
+        <div class="section-body section-body--hero">
+          <div class="hero-content section-layout section-layout--hero">
+            <div class="hero-copy">
+              <div class="hero-text-group">
+                <h1 class="hero-title">
+                  <span>Ты не одна.</span>
+                  <span class="hero-title-accent">У мамы теперь есть помощник</span>
+                </h1>
+                <p class="hero-subtitle">
+                  Задай любой вопрос — и получи проверенный ответ или готовое решение от AI и живого консультанта
+                </p>
+              </div>
+
+              <div class="hero-action-group">
+                <div class="button-row">
+                  <a class="button button--primary" href="#pricing">Попробовать за 199 ₽</a>
+                  <a class="button button--ghost" href="#question">Задать вопрос</a>
+                </div>
+
+                <ul class="hero-feature-list" aria-label="Преимущества">
+                  <li class="hero-feature">
+                    <span class="hero-feature-icon hero-feature-icon--time">◷</span>
+                    <span>Экономим твоё время</span>
+                  </li>
+                  <li class="hero-feature">
+                    <span class="hero-feature-icon hero-feature-icon--brain">✽</span>
+                    <span>Даём понятные ответы</span>
+                  </li>
+                  <li class="hero-feature">
+                    <span class="hero-feature-icon hero-feature-icon--people">♙</span>
+                    <span>Подключаем специалистов</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="hero-visual" aria-hidden="true">
+              <div class="hero-scene">
+                <div class="task-bubble task-bubble--sleep">
+                  <span class="task-icon">☾</span>
+                  <span class="task-text">сон</span>
+                </div>
+                <div class="task-bubble task-bubble--doctor">
+                  <span class="task-icon">♧</span>
+                  <span class="task-text">врач</span>
+                </div>
+                <div class="task-bubble task-bubble--shopping">
+                  <span class="task-icon">▱</span>
+                  <span class="task-text">покупки</span>
+                </div>
+                <div class="task-bubble task-bubble--food">
+                  <span class="task-icon">◌</span>
+                  <span class="task-text">питание</span>
+                </div>
+                <div class="task-bubble task-bubble--growth">
+                  <span class="task-icon">♢</span>
+                  <span class="task-text">развитие</span>
+                </div>
+                <div class="task-bubble task-bubble--plans">
+                  <span class="task-icon">▦</span>
+                  <span class="task-text">планы</span>
+                </div>
+
+                <img class="hero-image" src="./img/hero-img.png" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <ul class="hero-trust-list" aria-label="Почему нам доверяют">
+            <li class="hero-trust-item">
+              <span class="hero-trust-icon hero-trust-icon--heart">♥</span>
+              <span class="hero-trust-copy">
+                <strong>Ты важна</strong>
+                <span>Мы берём на себя рутину, чтобы ты была с ребёнком</span>
+              </span>
+            </li>
+            <li class="hero-trust-item">
+              <span class="hero-trust-icon hero-trust-icon--shield">◇</span>
+              <span class="hero-trust-copy">
+                <strong>Проверенные ответы</strong>
+                <span>Опираемся на опыт экспертов и реальные рекомендации</span>
+              </span>
+            </li>
+            <li class="hero-trust-item">
+              <span class="hero-trust-icon hero-trust-icon--lock">●</span>
+              <span class="hero-trust-copy">
+                <strong>Конфиденциально</strong>
+                <span>Твои данные и запросы под надёжной защитой</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section--pain" id="pain">
+        <div class="section-body section-body--pain">
+          <div class="pain-panel">
+            <div class="pain-head">
+              <div class="pain-kicker"><span>♥</span>Знакомо?<span>♥</span></div>
+              <h2 class="pain-title">
+                Мамы каждый день сталкиваются с десятками задач <strong class="pain-title-accent">и сотнями вопросов</strong>
+              </h2>
+            </div>
+
+            <ul class="card-list card-list--pain">
+              <li class="pain-card">
+                <div class="pain-illustration media-placeholder" aria-hidden="true"></div>
+                <p class="pain-text">Часами ищешь ответы<br />и всё равно сомневаешься</p>
+              </li>
+              <li class="pain-card">
+                <div class="pain-illustration media-placeholder" aria-hidden="true"></div>
+                <p class="pain-text">Нет времени разбираться<br />и сравнивать</p>
+              </li>
+              <li class="pain-card">
+                <div class="pain-illustration media-placeholder" aria-hidden="true"></div>
+                <p class="pain-text">Слишком много<br />противоречивых советов</p>
+              </li>
+              <li class="pain-card">
+                <div class="pain-illustration media-placeholder" aria-hidden="true"></div>
+                <p class="pain-text">Хочется просто спросить<br />и получить нормальный ответ</p>
+              </li>
+            </ul>
+
+            <p class="pain-bottom"><span>♥</span>Мы убираем этот шум и берём всё на себя</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--solution" id="solution">
+        <div class="section-body section-body--solution">
+          <div class="solution-layout">
+            <div class="solution-copy">
+              <div class="solution-kicker"><span>♥</span>Решение</div>
+              <h2 class="solution-title">
+                <span>Один сервис</span>
+                <span>вместо десятков специалистов</span>
+              </h2>
+              <p class="solution-text">
+                Просто напиши, что тебя волнует — и мы поможем разобраться или решим задачу за тебя без
+                бесконечного поиска, форумов и сомнений.
+              </p>
+              <ul class="solution-feature-list" aria-label="Что внутри сервиса">
+                <li class="solution-feature is-active">
+                  <button class="solution-feature-button" type="button" data-solution-tab="0" aria-pressed="true">
+                    <span class="solution-feature-icon solution-feature-icon--ai">✽</span>
+                    <span><strong>Умный AI</strong>с проверенной базой знаний</span>
+                  </button>
+                </li>
+                <li class="solution-feature">
+                  <button class="solution-feature-button" type="button" data-solution-tab="1" aria-pressed="false">
+                    <span class="solution-feature-icon solution-feature-icon--consult">♙</span>
+                    <span><strong>Живой консультант</strong>для сложных вопросов</span>
+                  </button>
+                </li>
+                <li class="solution-feature">
+                  <button class="solution-feature-button" type="button" data-solution-tab="2" aria-pressed="false">
+                    <span class="solution-feature-icon solution-feature-icon--experts">✿</span>
+                    <span><strong>Проверенные специалисты</strong>и сервисы рядом</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+
+            <div class="solution-phone" aria-label="Пример чата MamaTime">
+              <div class="solution-phone-top">
+                <span>10.41</span>
+                <span>MamaTime 💛</span>
+                <span>⌁</span>
+              </div>
+              <div class="solution-phone-screen">
+                <p class="solution-message solution-message--user" data-phone-question>Ребёнок плохо спит. Что делать?</p>
+                <div class="solution-answer-card">
+                  <p data-phone-answer>Это частый запрос у мам. Вот что может помочь: ...</p>
+                  <button type="button" data-phone-action>Показать рекомендации</button>
+                </div>
+                <div class="solution-consult-card">
+                  <p data-phone-note>Нужна помощь специалиста?</p>
+                  <span>
+                    <span class="solution-avatar"></span>
+                    <span data-phone-meta>Консультант подключится в течение 1–3 часов</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--questions" id="question">
+        <div class="section-body section-body--questions">
+          <div class="questions-head">
+            <div class="questions-kicker"><span>♥</span>Спроси что угодно</div>
+            <h2 class="questions-title">Примеры вопросов</h2>
+          </div>
+
+          <ul class="question-list" aria-label="Примеры запросов">
+            <li class="question-card">
+              <span class="question-visual media-placeholder"></span>
+              <span>Ребёнок плохо спит — что делать?</span>
+            </li>
+            <li class="question-card">
+              <span class="question-visual media-placeholder"></span>
+              <span>Посоветуй хорошего педиатра рядом</span>
+            </li>
+            <li class="question-card">
+              <span class="question-visual media-placeholder"></span>
+              <span>Что подарить ребёнку на 3 года?</span>
+            </li>
+            <li class="question-card">
+              <span class="question-visual media-placeholder"></span>
+              <span>Составь план выходных с ребёнком</span>
+            </li>
+            <li class="question-card">
+              <span class="question-visual media-placeholder"></span>
+              <span>Как отучить от соски?</span>
+            </li>
+            <li class="question-card">
+              <span class="question-visual media-placeholder"></span>
+              <span>Какие анализы нужно сдать?</span>
+            </li>
+          </ul>
+
+          <p class="questions-bottom"><span>♥</span>От бытовых вопросов до рекомендаций специалистов</p>
+        </div>
+      </section>
+
+      <section class="section section--steps" id="steps">
+        <div class="section-body section-body--steps">
+          <div class="steps-head">
+            <div class="bottom-kicker"><span>♥</span>Как это работает</div>
+            <h2 class="bottom-title">Всё проще, чем кажется</h2>
+          </div>
+
+          <div class="steps-layout">
+            <ol class="step-list" aria-label="Как это работает">
+              <li class="step-card step-card--question">
+                <div class="step-caption">
+                  <span class="step-number">1</span>
+                  <h3 class="step-title">Пишешь вопрос<br />в чат</h3>
+                </div>
+                <div class="step-visual media-placeholder" aria-hidden="true"></div>
+              </li>
+              <li class="step-card step-card--process">
+                <div class="step-caption">
+                  <span class="step-number">2</span>
+                  <h3 class="step-title">AI или консультант<br />разбирается</h3>
+                </div>
+                <div class="step-visual media-placeholder" aria-hidden="true"></div>
+              </li>
+              <li class="step-card step-card--result">
+                <div class="step-caption">
+                  <span class="step-number">3</span>
+                  <h3 class="step-title">Ты получаешь готовый<br />ответ или решение</h3>
+                </div>
+                <div class="step-visual media-placeholder" aria-hidden="true"></div>
+              </li>
+            </ol>
+
+            <div class="steps-family media-placeholder" aria-hidden="true"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--reviews" id="reviews">
+        <div class="section-body section-body--reviews">
+          <div class="reviews-head">
+            <div class="bottom-kicker"><span>♥</span>Отзывы</div>
+            <h2 class="bottom-title">Мамам становится спокойнее</h2>
+          </div>
+
+          <ul class="reviews-list" aria-label="Отзывы мам">
+            <li class="review-card">
+              <div class="review-person">
+                <span class="review-avatar">А</span>
+                <span>
+                  <strong>Анна</strong>
+                  <span>мама дочки 1,5 года</span>
+                </span>
+              </div>
+              <p>Спросила про сон и получила понятный план без десятков вкладок и тревожных форумов.</p>
+            </li>
+            <li class="review-card">
+              <div class="review-person">
+                <span class="review-avatar">М</span>
+                <span>
+                  <strong>Мария</strong>
+                  <span>мама двоих детей</span>
+                </span>
+              </div>
+              <p>Очень выручает, когда нужно быстро понять, что делать сейчас, а что можно спокойно отложить.</p>
+            </li>
+            <li class="review-card">
+              <div class="review-person">
+                <span class="review-avatar">К</span>
+                <span>
+                  <strong>Ксения</strong>
+                  <span>мама сына 3 года</span>
+                </span>
+              </div>
+              <p>Понравилось, что можно не только спросить AI, но и подключить человека, если вопрос сложный.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section--pricing" id="pricing">
+        <div class="section-body section-body--pricing">
+          <article class="pricing-panel">
+            <div class="bottom-kicker"><span>♥</span>Выбери удобный формат</div>
+
+            <ul class="pricing-list" aria-label="Тарифы">
+              <li class="price-card price-card--base">
+                <div class="price-head">
+                  <span class="price-icon">♧</span>
+                  <h3 class="price-title">Базовый</h3>
+                </div>
+                <p class="price-value"><strong>199 ₽</strong> / мес</p>
+                <ul class="price-features">
+                  <li>AI-чат для мам</li>
+                  <li>Проверенные ответы</li>
+                  <li>Быстрые решения</li>
+                </ul>
+                <a class="price-action price-action--base" href="#question">Попробовать</a>
+              </li>
+              <li class="price-card price-card--featured">
+                <div class="price-head">
+                  <span class="price-icon">♡</span>
+                  <h3 class="price-title">С консультантом</h3>
+                </div>
+                <p class="price-value"><strong>3 500 ₽</strong> / мес</p>
+                <ul class="price-features">
+                  <li>Всё из базового</li>
+                  <li>Подключение человека</li>
+                  <li>Ответ за 1–3 часа</li>
+                  <li>Подбор специалистов</li>
+                </ul>
+                <a class="price-action price-action--consult" href="#question">Выбрать</a>
+              </li>
+              <li class="price-card price-card--vip">
+                <div class="price-head">
+                  <span class="price-icon">♛</span>
+                  <h3 class="price-title">VIP</h3>
+                </div>
+                <p class="price-value"><strong>25 000 ₽</strong> / мес</p>
+                <ul class="price-features">
+                  <li>Личный помощник</li>
+                  <li>Решает задачи за тебя</li>
+                  <li>Знает твою ситуацию</li>
+                  <li>Всегда на связи</li>
+                </ul>
+                <a class="price-action price-action--vip" href="#question">Стать VIP</a>
+              </li>
+            </ul>
+
+            <p class="pricing-note">Можно изменить тариф в любой момент</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--benefits" id="benefits">
+        <div class="section-body section-body--benefits">
+          <article class="benefits-panel">
+            <div class="bottom-kicker"><span>♥</span>Что ты получаешь</div>
+            <h2 class="benefits-title">Больше времени<br />на то, что важно</h2>
+
+            <ul class="benefit-list" aria-label="Что ты получаешь">
+              <li class="benefit-item">Меньше тревоги и сомнений</li>
+              <li class="benefit-item">Понятные и проверенные ответы</li>
+              <li class="benefit-item">Помощь в сложных ситуациях</li>
+              <li class="benefit-item">Экономия часов каждый день</li>
+              <li class="benefit-item">Больше времени для ребёнка и себя</li>
+            </ul>
+
+            <div class="benefits-side">
+              <div class="benefits-mom media-placeholder" aria-hidden="true"></div>
+              <div class="final-panel">
+                <div class="final-copy">
+                  <h2 class="final-title">Попробуй уже сегодня</h2>
+                  <p class="final-subtitle">Первый ответ — и ты почувствуешь разницу</p>
+                </div>
+                <a class="button button--primary button--large" href="#question">Задать вопрос</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <div class="site-footer-body">
+          <a class="brand-link" href="#top" aria-label="MamaTime">
+            <span class="brand-name">MamaTime</span>
+            <span class="brand-caption">помощник для мам</span>
+          </a>
+          <p class="footer-text">Консьерж-сервис для мам. Помогаем быстрее находить ответы и решения.</p>
+          <nav class="footer-links" aria-label="Навигация в футере">
+            <a href="#steps">Как это работает</a>
+            <a href="#question">Примеры вопросов</a>
+            <a href="#pricing">Тарифы</a>
+          </nav>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
