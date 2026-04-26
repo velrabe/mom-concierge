@@ -1,24 +1,42 @@
 const solutionSlides = [
   {
-    question: "Ребёнок плохо спит. Что делать?",
-    answer: "AI быстро собирает контекст, отсеивает лишнее и предлагает понятные шаги на сегодня.",
-    action: "Показать рекомендации",
-    note: "Можно уточнить возраст, режим и симптомы",
-    meta: "Ответ обновится под твою ситуацию",
+    question: "Как быстро понять, почему ребёнок плохо спит?",
+    questionTime: "11:24",
+    answer: "Собрала короткий план проверки режима. Начнём с возраста, окон бодрствования и ритуала перед сном.",
+    answerTime: "11:25",
+    cardIcon: "AI",
+    cardTitle: "План сна на сегодня",
+    cardSubtitle: "3 шага: режим, ритуал, мягкое укладывание",
+    cardMeta: "Обновлено под возраст 8 месяцев",
+    primaryAction: "Открыть план",
+    secondaryAction: "Уточнить",
+    input: "Напишите сообщение...",
   },
   {
-    question: "Нужно разобраться глубже?",
-    answer: "Консультант подключится к вопросу, задаст уточнения и поможет выбрать безопасное решение.",
-    action: "Подключить консультанта",
-    note: "Когда вопрос сложный или тревожный",
-    meta: "Человек ответит в течение 1–3 часов",
+    question: "Температура держится второй день. Что делать до врача?",
+    questionTime: "12:08",
+    answer: "Передала вопрос консультанту. Он уточнит возраст, симптомы и подскажет безопасные шаги до очного осмотра.",
+    answerTime: "12:09",
+    cardIcon: "К",
+    cardTitle: "Анна М., консультант",
+    cardSubtitle: "Педиатрический триаж, 9 лет опыта",
+    cardMeta: "Ответит в течение 20 минут",
+    primaryAction: "Подключить",
+    secondaryAction: "Что спросит?",
+    input: "Опишите симптомы...",
   },
   {
-    question: "Нужен специалист рядом?",
-    answer: "Подберём проверенного врача, сервис или подходящий вариант по твоему запросу.",
-    action: "Подобрать специалиста",
-    note: "Рекомендации без бесконечного поиска",
-    meta: "Учитываем задачу, район и срочность",
+    question: "Посоветуйте нормального педиатра, а то уже 2 не зашли",
+    questionTime: "11:30",
+    answer: "Подобрали 3 проверенных врача рядом с вами. Вот разница + отзывы. Можем записать на завтра.",
+    answerTime: "11:31",
+    cardIcon: "И",
+    cardTitle: "Иванова А. С.",
+    cardSubtitle: "Педиатр, стаж 12 лет",
+    cardMeta: "★ 4.9 (86 отзывов)",
+    primaryAction: "Записать",
+    secondaryAction: "Сравнить",
+    input: "Напишите сообщение...",
   },
 ];
 
@@ -26,10 +44,16 @@ const solutionTabs = Array.from(document.querySelectorAll("[data-solution-tab]")
 const solutionItems = Array.from(document.querySelectorAll(".solution-feature"));
 const phoneScreen = document.querySelector(".solution-phone-screen");
 const phoneQuestion = document.querySelector("[data-phone-question]");
+const phoneQuestionTime = document.querySelector("[data-phone-question-time]");
 const phoneAnswer = document.querySelector("[data-phone-answer]");
-const phoneAction = document.querySelector("[data-phone-action]");
-const phoneNote = document.querySelector("[data-phone-note]");
-const phoneMeta = document.querySelector("[data-phone-meta]");
+const phoneAnswerTime = document.querySelector("[data-phone-answer-time]");
+const phoneCardIcon = document.querySelector("[data-phone-card-icon]");
+const phoneCardTitle = document.querySelector("[data-phone-card-title]");
+const phoneCardSubtitle = document.querySelector("[data-phone-card-subtitle]");
+const phoneCardMeta = document.querySelector("[data-phone-card-meta]");
+const phonePrimaryAction = document.querySelector("[data-phone-primary-action]");
+const phoneSecondaryAction = document.querySelector("[data-phone-secondary-action]");
+const phoneInput = document.querySelector("[data-phone-input]");
 
 let activeSolutionSlide = 0;
 let solutionTimer;
@@ -42,10 +66,16 @@ function renderSolutionSlide(index) {
 
   window.setTimeout(() => {
     if (phoneQuestion) phoneQuestion.textContent = slide.question;
+    if (phoneQuestionTime) phoneQuestionTime.textContent = slide.questionTime;
     if (phoneAnswer) phoneAnswer.textContent = slide.answer;
-    if (phoneAction) phoneAction.textContent = slide.action;
-    if (phoneNote) phoneNote.textContent = slide.note;
-    if (phoneMeta) phoneMeta.textContent = slide.meta;
+    if (phoneAnswerTime) phoneAnswerTime.textContent = slide.answerTime;
+    if (phoneCardIcon) phoneCardIcon.textContent = slide.cardIcon;
+    if (phoneCardTitle) phoneCardTitle.textContent = slide.cardTitle;
+    if (phoneCardSubtitle) phoneCardSubtitle.textContent = slide.cardSubtitle;
+    if (phoneCardMeta) phoneCardMeta.textContent = slide.cardMeta;
+    if (phonePrimaryAction) phonePrimaryAction.textContent = slide.primaryAction;
+    if (phoneSecondaryAction) phoneSecondaryAction.textContent = slide.secondaryAction;
+    if (phoneInput) phoneInput.textContent = slide.input;
 
     solutionItems.forEach((item, itemIndex) => {
       item.classList.toggle("is-active", itemIndex === index);

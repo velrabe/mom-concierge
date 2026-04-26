@@ -9,9 +9,14 @@
   </head>
   <body>
     <header class="hero-nav" aria-label="Навигация">
-      <a class="brand-link" href="#top" aria-label="MamaTime">
-        <span class="brand-name">MamaTime</span>
-        <span class="brand-caption">помощник для мам</span>
+      <a class="brand-link" href="#top" aria-label="MAMADO">
+        <span class="brand-icon-wrap">
+          <img class="brand-icon" src="./img/logo.svg" alt="" />
+        </span>
+        <span class="brand-copy">
+          <span class="brand-name">MAMADO</span>
+          <span class="brand-caption">Помощник для мам</span>
+        </span>
       </a>
 
       <nav class="nav-links" aria-label="Разделы">
@@ -96,8 +101,39 @@
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <ul class="hero-trust-list" aria-label="Почему нам доверяют">
+      <section class="section section--partners" id="partners" aria-label="Партнеры">
+        <div class="section-body section-body--partners">
+          <div class="partners-row">
+            <ul class="partners-list">
+              <li class="partners-item">
+                <img class="partners-logo" src="./img/partners-logo/marie-claire.svg" alt="Marie Claire" />
+              </li>
+              <li class="partners-item">
+                <img class="partners-logo" src="./img/partners-logo/parents-ru.svg" alt="Parents.ru" />
+              </li>
+              <li class="partners-item">
+                <img class="partners-logo" src="./img/partners-logo/psychologies.svg" alt="Psychologies" />
+              </li>
+              <li class="partners-item">
+                <img class="partners-logo" src="./img/partners-logo/shkulev-holding.svg" alt="Shkulev Holding" />
+              </li>
+              <li class="partners-item">
+                <img class="partners-logo" src="./img/partners-logo/the-day-ru.svg" alt="The Day.ru" />
+              </li>
+              <li class="partners-item">
+                <img class="partners-logo" src="./img/partners-logo/woman-ru.svg" alt="Woman.ru" />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--hero-trust" aria-label="Почему нам доверяют">
+        <div class="section-body section-body--hero-trust">
+          <ul class="hero-trust-list">
             <li class="hero-trust-item">
               <span class="hero-trust-icon hero-trust-icon--heart">♥</span>
               <span class="hero-trust-copy">
@@ -127,32 +163,94 @@
         <div class="section-body section-body--pain">
           <div class="pain-panel">
             <div class="pain-head">
-              <div class="pain-kicker"><span>♥</span>Знакомо?<span>♥</span></div>
+              <div class="pain-kicker">
+                <span class="pain-kicker-text">Знакомо?</span>
+              </div>
               <h2 class="pain-title">
-                Мамы каждый день сталкиваются с десятками задач <strong class="pain-title-accent">и сотнями вопросов</strong>
+                <span>Это не вы одна.</span>
+                <span class="pain-title-accent">Просто сейчас всё слишком сложно</span>
               </h2>
+              <p class="pain-lead">
+                <span>Каждый день у мамы десятки задач и тысяча решений.</span>
+                <span>На поиски уходят часы, а сил становится всё меньше.</span>
+              </p>
             </div>
 
             <ul class="card-list card-list--pain">
               <li class="pain-card">
-                <div class="pain-illustration media-placeholder" aria-hidden="true"></div>
-                <p class="pain-text">Часами ищешь ответы<br />и всё равно сомневаешься</p>
+                <div class="pain-image-wrap">
+                  <img class="pain-image" src="./img/pain/p1.png" alt="" />
+                </div>
+                <div class="pain-card-content">
+                  <div class="pain-card-copy">
+                    <h3 class="pain-card-title">Тратите часы на поиск и&nbsp;сравнение</h3>
+                    <p class="pain-card-description">Врачей, клиник, кружков, нянь... И&nbsp;всё равно не&nbsp;уверены в&nbsp;выборе</p>
+                  </div>
+                </div>
               </li>
               <li class="pain-card">
-                <div class="pain-illustration media-placeholder" aria-hidden="true"></div>
-                <p class="pain-text">Нет времени разбираться<br />и сравнивать</p>
+                <div class="pain-image-wrap">
+                  <img class="pain-image" src="./img/pain/p2.png" alt="" />
+                </div>
+                <div class="pain-card-content">
+                  <div class="pain-card-copy">
+                    <h3 class="pain-card-title">Получаете десятки разных мнений</h3>
+                    <p class="pain-card-description">В&nbsp;чатах, у&nbsp;подруг, в&nbsp;интернете. От&nbsp;этого только больше сомнений</p>
+                  </div>
+                </div>
               </li>
               <li class="pain-card">
-                <div class="pain-illustration media-placeholder" aria-hidden="true"></div>
-                <p class="pain-text">Слишком много<br />противоречивых советов</p>
+                <div class="pain-image-wrap">
+                  <img class="pain-image" src="./img/pain/p3.png" alt="" />
+                </div>
+                <div class="pain-card-content">
+                  <div class="pain-card-copy">
+                    <h3 class="pain-card-title">Непонятно, кому можно доверять</h3>
+                    <p class="pain-card-description">Страшно ошибиться, когда речь о&nbsp;здоровье и&nbsp;развитии ребёнка</p>
+                  </div>
+                </div>
               </li>
               <li class="pain-card">
-                <div class="pain-illustration media-placeholder" aria-hidden="true"></div>
-                <p class="pain-text">Хочется просто спросить<br />и получить нормальный ответ</p>
+                <div class="pain-image-wrap">
+                  <img class="pain-image" src="./img/pain/p4.png" alt="" />
+                </div>
+                <div class="pain-card-content">
+                  <div class="pain-card-copy">
+                    <h3 class="pain-card-title">Приходится делать всё&nbsp;самой</h3>
+                    <p class="pain-card-description">Записать, уточнить, напомнить, организовать, привезти...</p>
+                  </div>
+                </div>
+              </li>
+              <li class="pain-card">
+                <div class="pain-image-wrap">
+                  <img class="pain-image" src="./img/pain/p5.png" alt="" />
+                </div>
+                <div class="pain-card-content">
+                  <div class="pain-card-copy">
+                    <h3 class="pain-card-title">Не остаётся времени <br> на&nbsp;себя</h3>
+                    <p class="pain-card-description">На отдых, на&nbsp;хобби, на&nbsp;то, что&nbsp;наполняет и&nbsp;даёт силы</p>
+                  </div>
+                </div>
               </li>
             </ul>
 
-            <p class="pain-bottom"><span>♥</span>Мы убираем этот шум и берём всё на себя</p>
+            <div class="pain-bottom">
+              <div class="pain-bottom-icon" aria-hidden="true">
+                <svg class="pain-bottom-icon-svg" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
+                  <path fill="currentColor" d="m12 21l-1.45-1.3C5.4 15.08 2 12.03 2 8.3C2 5.25 4.42 3 7.35 3c1.65 0 3.24.77 4.25 1.98C12.61 3.77 14.2 3 15.85 3C18.78 3 21.2 5.25 21.2 8.3c0 3.73-3.4 6.78-8.55 11.4z" />
+                </svg>
+              </div>
+              <div class="pain-bottom-copy">
+                <p class="pain-bottom-title">Мы здесь, чтобы это изменить.</p>
+                <p class="pain-bottom-text">
+                  Вы остаётесь главной мамой. Мы берём на себя всё, что можно делегировать.
+                  Чтобы у вас появилось время на самое важное — вашу семью и себя.
+                </p>
+              </div>
+              <div class="pain-bottom-decor" aria-hidden="true">
+                <img class="pain-bottom-decor-image" src="./img/pain/heart.svg" alt="" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -192,24 +290,84 @@
               </ul>
             </div>
 
-            <div class="solution-phone" aria-label="Пример чата MamaTime">
-              <div class="solution-phone-top">
-                <span>10.41</span>
-                <span>MamaTime 💛</span>
-                <span>⌁</span>
-              </div>
-              <div class="solution-phone-screen">
-                <p class="solution-message solution-message--user" data-phone-question>Ребёнок плохо спит. Что делать?</p>
-                <div class="solution-answer-card">
-                  <p data-phone-answer>Это частый запрос у мам. Вот что может помочь: ...</p>
-                  <button type="button" data-phone-action>Показать рекомендации</button>
-                </div>
-                <div class="solution-consult-card">
-                  <p data-phone-note>Нужна помощь специалиста?</p>
-                  <span>
-                    <span class="solution-avatar"></span>
-                    <span data-phone-meta>Консультант подключится в течение 1–3 часов</span>
+            <div class="solution-phone" aria-label="Пример чата MAMADO">
+              <div class="solution-phone-header">
+                <span class="solution-phone-manager-icon">M</span>
+                <span class="solution-phone-manager-copy">
+                  <span class="solution-phone-manager-title">Ваш менеджер MAMADO</span>
+                  <span class="solution-phone-manager-status">
+                    <span class="solution-phone-status-dot"></span>
+                    <span>Онлайн</span>
                   </span>
+                </span>
+              </div>
+
+              <div class="solution-phone-screen">
+                <div class="solution-phone-thread">
+                  <div class="solution-chat-row solution-chat-row--user">
+                    <span class="solution-chat-copy">
+                      <span class="solution-chat-name">Вы</span>
+                      <span class="solution-message solution-message--user">
+                        <span data-phone-question>Как быстро понять, почему ребёнок плохо спит?</span>
+                        <span class="solution-message-time" data-phone-question-time>11:24</span>
+                      </span>
+                    </span>
+                  </div>
+
+                  <div class="solution-chat-row solution-chat-row--manager">
+                    <span class="solution-manager-avatar">M</span>
+                    <span class="solution-chat-copy">
+                      <span class="solution-chat-name">MAMADO</span>
+                      <span class="solution-message solution-message--manager">
+                        <span data-phone-answer>Собрала короткий план проверки режима. Начнём с возраста, окон бодрствования и ритуала перед сном.</span>
+                        <span class="solution-message-time" data-phone-answer-time>11:25</span>
+                      </span>
+                    </span>
+                  </div>
+
+                  <div class="solution-chat-row solution-chat-row--manager solution-chat-row--panel">
+                    <span class="solution-manager-avatar solution-manager-avatar--spacer" aria-hidden="true">M</span>
+                    <span class="solution-assistant-panel">
+                      <span class="solution-result-card">
+                        <span class="solution-result-avatar" data-phone-card-icon>AI</span>
+                        <span class="solution-result-copy">
+                          <span class="solution-result-title" data-phone-card-title>План сна на сегодня</span>
+                          <span class="solution-result-subtitle" data-phone-card-subtitle>3 шага: режим, ритуал, мягкое укладывание</span>
+                          <span class="solution-result-meta" data-phone-card-meta>Обновлено под возраст 8 месяцев</span>
+                        </span>
+                        <span class="solution-result-arrow">
+                          <svg class="solution-result-arrow-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                            <g fill="none" fill-rule="evenodd">
+                              <path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                              <path fill="currentColor" d="M15.707 11.293a1 1 0 0 1 0 1.414l-5.657 5.657a1 1 0 1 1-1.414-1.414l4.95-4.95l-4.95-4.95a1 1 0 0 1 1.414-1.414z" />
+                            </g>
+                          </svg>
+                        </span>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="solution-phone-composer">
+                  <div class="solution-phone-actions">
+                    <button class="solution-phone-action solution-phone-action--primary" type="button">
+                      <span data-phone-primary-action>Открыть план</span>
+                    </button>
+                    <button class="solution-phone-action solution-phone-action--secondary" type="button">
+                      <span data-phone-secondary-action>Уточнить</span>
+                    </button>
+                  </div>
+
+                  <div class="solution-phone-input-row">
+                    <div class="solution-phone-input">
+                      <span data-phone-input>Напишите сообщение...</span>
+                    </div>
+                    <button class="solution-phone-send" type="button" aria-label="Отправить сообщение">
+                      <svg class="solution-phone-send-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill="currentColor" d="M12 4a1 1 0 0 1 .707.293l6 6a1 1 0 0 1-1.414 1.414L13 7.414V19a1 1 0 1 1-2 0V7.414l-4.293 4.293a1 1 0 0 1-1.414-1.414l6-6A1 1 0 0 1 12 4" />
+                      </svg>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
