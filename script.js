@@ -106,3 +106,8 @@ solutionTabs.forEach((tab) => {
 if (solutionTabs.length > 0) {
   startSolutionAutoplay();
 }
+
+const footerForm = document.querySelector(".site-footer-form");
+footerForm?.addEventListener("submit", (event) => {
+  event.preventDefault();
+});

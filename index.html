@@ -50,21 +50,37 @@
               <div class="hero-action-group">
                 <div class="button-row">
                   <a class="button button--primary" href="#pricing">Попробовать за 199 ₽</a>
-                  <a class="button button--ghost" href="#question">Задать вопрос</a>
+                  <a class="button button--ghost" href="#question">
+                    <span class="button-icon" aria-hidden="true">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                        <g fill="none" stroke="currentColor" stroke-width="2">
+                          <path d="M4 12a8 8 0 1 1 16 0v5.09c0 .848 0 1.27-.126 1.609a2 2 0 0 1-1.175 1.175C18.36 20 17.937 20 17.09 20H12a8 8 0 0 1-8-8Z" />
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M9 11h6m-3 4h3" />
+                        </g>
+                      </svg>
+                    </span>
+                    <span class="button-text">Задать вопрос</span>
+                  </a>
                 </div>
 
                 <ul class="hero-feature-list" aria-label="Преимущества">
                   <li class="hero-feature">
-                    <span class="hero-feature-icon hero-feature-icon--time">◷</span>
+                    <span class="hero-feature-icon hero-feature-icon--time">
+                      <img src="./img/hero-icons/copy/time.svg" alt="" width="24" height="24" decoding="async" />
+                    </span>
                     <span>Экономим твоё время</span>
                   </li>
                   <li class="hero-feature">
-                    <span class="hero-feature-icon hero-feature-icon--brain">✽</span>
+                    <span class="hero-feature-icon hero-feature-icon--brain">
+                      <img src="./img/hero-icons/copy/star.svg" alt="" width="24" height="24" decoding="async" />
+                    </span>
                     <span>Даём понятные ответы</span>
                   </li>
                   <li class="hero-feature">
-                    <span class="hero-feature-icon hero-feature-icon--people">♙</span>
-                    <span>Подключаем специалистов</span>
+                    <span class="hero-feature-icon hero-feature-icon--people">
+                      <img src="./img/hero-icons/copy/shield.svg" alt="" width="24" height="24" decoding="async" />
+                    </span>
+                    <span>Советы специалистов</span>
                   </li>
                 </ul>
               </div>
@@ -72,29 +88,45 @@
 
             <div class="hero-visual" aria-hidden="true">
               <div class="hero-scene">
-                <div class="task-bubble task-bubble--sleep">
-                  <span class="task-icon">☾</span>
-                  <span class="task-text">сон</span>
+                <div class="task-bubble-group task-bubble-group--left">
+                  <div class="task-bubble task-bubble--tilt-3">
+                    <span class="task-icon">
+                      <img src="./img/hero-icons/sleep.svg" alt="" width="24" height="24" decoding="async" />
+                    </span>
+                    <span class="task-text">сон</span>
+                  </div>
+                  <div class="task-bubble">
+                    <span class="task-icon">
+                      <img src="./img/hero-icons/doctor.svg" alt="" width="24" height="24" decoding="async" />
+                    </span>
+                    <span class="task-text">врач</span>
+                  </div>
+                  <div class="task-bubble task-bubble--tilt-n3">
+                    <span class="task-icon">
+                      <img src="./img/hero-icons/shop.svg" alt="" width="24" height="24" decoding="async" />
+                    </span>
+                    <span class="task-text">покупки</span>
+                  </div>
                 </div>
-                <div class="task-bubble task-bubble--doctor">
-                  <span class="task-icon">♧</span>
-                  <span class="task-text">врач</span>
-                </div>
-                <div class="task-bubble task-bubble--shopping">
-                  <span class="task-icon">▱</span>
-                  <span class="task-text">покупки</span>
-                </div>
-                <div class="task-bubble task-bubble--food">
-                  <span class="task-icon">◌</span>
-                  <span class="task-text">питание</span>
-                </div>
-                <div class="task-bubble task-bubble--growth">
-                  <span class="task-icon">♢</span>
-                  <span class="task-text">развитие</span>
-                </div>
-                <div class="task-bubble task-bubble--plans">
-                  <span class="task-icon">▦</span>
-                  <span class="task-text">планы</span>
+                <div class="task-bubble-group task-bubble-group--right">
+                  <div class="task-bubble task-bubble--tilt-n3">
+                    <span class="task-icon">
+                      <img src="./img/hero-icons/food.svg" alt="" width="24" height="24" decoding="async" />
+                    </span>
+                    <span class="task-text">питание</span>
+                  </div>
+                  <div class="task-bubble">
+                    <span class="task-icon">
+                      <img src="./img/hero-icons/growth.svg" alt="" width="24" height="24" decoding="async" />
+                    </span>
+                    <span class="task-text">развитие</span>
+                  </div>
+                  <div class="task-bubble task-bubble--tilt-3">
+                    <span class="task-icon">
+                      <img src="./img/hero-icons/calendar.svg" alt="" width="24" height="24" decoding="async" />
+                    </span>
+                    <span class="task-text">планы</span>
+                  </div>
                 </div>
 
                 <img class="hero-image" src="./img/hero-img.png" alt="" />
@@ -131,34 +163,6 @@
         </div>
       </section>
 
-      <section class="section section--hero-trust" aria-label="Почему нам доверяют">
-        <div class="section-body section-body--hero-trust">
-          <ul class="hero-trust-list">
-            <li class="hero-trust-item">
-              <span class="hero-trust-icon hero-trust-icon--heart">♥</span>
-              <span class="hero-trust-copy">
-                <strong>Ты важна</strong>
-                <span>Мы берём на себя рутину, чтобы ты была с ребёнком</span>
-              </span>
-            </li>
-            <li class="hero-trust-item">
-              <span class="hero-trust-icon hero-trust-icon--shield">◇</span>
-              <span class="hero-trust-copy">
-                <strong>Проверенные ответы</strong>
-                <span>Опираемся на опыт экспертов и реальные рекомендации</span>
-              </span>
-            </li>
-            <li class="hero-trust-item">
-              <span class="hero-trust-icon hero-trust-icon--lock">●</span>
-              <span class="hero-trust-copy">
-                <strong>Конфиденциально</strong>
-                <span>Твои данные и запросы под надёжной защитой</span>
-              </span>
-            </li>
-          </ul>
-        </div>
-      </section>
-
       <section class="section section--pain" id="pain">
         <div class="section-body section-body--pain">
           <div class="pain-panel">
@@ -170,10 +174,6 @@
                 <span>Это не вы одна.</span>
                 <span class="pain-title-accent">Просто сейчас всё слишком сложно</span>
               </h2>
-              <p class="pain-lead">
-                <span>Каждый день у мамы десятки задач и тысяча решений.</span>
-                <span>На поиски уходят часы, а сил становится всё меньше.</span>
-              </p>
             </div>
 
             <ul class="card-list card-list--pain">
@@ -271,23 +271,47 @@
               <ul class="solution-feature-list" aria-label="Что внутри сервиса">
                 <li class="solution-feature is-active">
                   <button class="solution-feature-button" type="button" data-solution-tab="0" aria-pressed="true">
-                    <span class="solution-feature-icon solution-feature-icon--ai">✽</span>
-                    <span><strong>Умный AI</strong>с проверенной базой знаний</span>
+                    <span class="solution-feature-accent" aria-hidden="true"></span>
+                    <span class="solution-feature-icon-wrap">
+                      <img class="solution-feature-icon-img" src="./img/msg-gallery/ai.svg" width="32" height="32" alt="" decoding="async" />
+                    </span>
+                    <span class="solution-feature-copy">
+                      <span class="solution-feature-title">Умный AI</span>
+                      <span class="solution-feature-sub">с проверенной базой знаний</span>
+                    </span>
                   </button>
                 </li>
                 <li class="solution-feature">
                   <button class="solution-feature-button" type="button" data-solution-tab="1" aria-pressed="false">
-                    <span class="solution-feature-icon solution-feature-icon--consult">♙</span>
-                    <span><strong>Живой консультант</strong>для сложных вопросов</span>
+                    <span class="solution-feature-accent" aria-hidden="true"></span>
+                    <span class="solution-feature-icon-wrap">
+                      <img class="solution-feature-icon-img" src="./img/msg-gallery/chat.svg" width="32" height="32" alt="" decoding="async" />
+                    </span>
+                    <span class="solution-feature-copy">
+                      <span class="solution-feature-title">Живой консультант</span>
+                      <span class="solution-feature-sub">для сложных вопросов</span>
+                    </span>
                   </button>
                 </li>
                 <li class="solution-feature">
                   <button class="solution-feature-button" type="button" data-solution-tab="2" aria-pressed="false">
-                    <span class="solution-feature-icon solution-feature-icon--experts">✿</span>
-                    <span><strong>Проверенные специалисты</strong>и сервисы рядом</span>
+                    <span class="solution-feature-accent" aria-hidden="true"></span>
+                    <span class="solution-feature-icon-wrap">
+                      <img class="solution-feature-icon-img" src="./img/msg-gallery/shield.svg" width="32" height="32" alt="" decoding="async" />
+                    </span>
+                    <span class="solution-feature-copy">
+                      <span class="solution-feature-title">Проверенные специалисты</span>
+                      <span class="solution-feature-sub">и сервисы рядом</span>
+                    </span>
                   </button>
                 </li>
               </ul>
+              <p class="solution-feature-foot">
+                <span class="solution-feature-foot-icon-wrap">
+                  <img class="solution-feature-foot-icon" src="./img/msg-gallery/shield.svg" width="24" height="24" alt="" decoding="async" />
+                </span>
+                <span class="solution-feature-foot-text">Мы проверяем всех специалистов и сервисы вручную</span>
+              </p>
             </div>
 
             <div class="solution-phone" aria-label="Пример чата MAMADO">
@@ -384,32 +408,72 @@
 
           <ul class="question-list" aria-label="Примеры запросов">
             <li class="question-card">
-              <span class="question-visual media-placeholder"></span>
-              <span>Ребёнок плохо спит — что делать?</span>
+              <div class="question-card-head">
+                <span class="question-card-icon-wrap">
+                  <img class="question-card-icon" src="./img/hero-icons/sleep.svg" alt="" width="24" height="24" decoding="async" />
+                </span>
+                <span class="question-card-cat">Сон</span>
+              </div>
+              <h3 class="question-card-title">Ребёнок плохо спит — что делать?</h3>
+              <p class="question-card-desc">Соберём чек-лист по режиму и мягко подскажем, с чего начать сегодня вечером.</p>
+              <a class="question-card-link" href="#pricing">Подробнее<span class="question-card-link-arrow" aria-hidden="true">→</span></a>
             </li>
             <li class="question-card">
-              <span class="question-visual media-placeholder"></span>
-              <span>Посоветуй хорошего педиатра рядом</span>
+              <div class="question-card-head">
+                <span class="question-card-icon-wrap">
+                  <img class="question-card-icon" src="./img/hero-icons/doctor.svg" alt="" width="24" height="24" decoding="async" />
+                </span>
+                <span class="question-card-cat">Поиск врача</span>
+              </div>
+              <h3 class="question-card-title">Посоветуй хорошего педиатра рядом</h3>
+              <p class="question-card-desc">Подберём клиники и вопросы, которые стоит задать на первом приёме.</p>
+              <a class="question-card-link" href="#pricing">Подробнее<span class="question-card-link-arrow" aria-hidden="true">→</span></a>
             </li>
             <li class="question-card">
-              <span class="question-visual media-placeholder"></span>
-              <span>Что подарить ребёнку на 3 года?</span>
+              <div class="question-card-head">
+                <span class="question-card-icon-wrap">
+                  <img class="question-card-icon" src="./img/hero-icons/copy/star.svg" alt="" width="24" height="24" decoding="async" />
+                </span>
+                <span class="question-card-cat">Развитие</span>
+              </div>
+              <h3 class="question-card-title">Что подарить ребёнку на 3 года?</h3>
+              <p class="question-card-desc">Идеи по возрасту и бюджету — можно сузить по интересам ребёнка.</p>
+              <a class="question-card-link" href="#pricing">Подробнее<span class="question-card-link-arrow" aria-hidden="true">→</span></a>
             </li>
             <li class="question-card">
-              <span class="question-visual media-placeholder"></span>
-              <span>Составь план выходных с ребёнком</span>
+              <div class="question-card-head">
+                <span class="question-card-icon-wrap">
+                  <img class="question-card-icon" src="./img/hero-icons/calendar.svg" alt="" width="24" height="24" decoding="async" />
+                </span>
+                <span class="question-card-cat">Планы</span>
+              </div>
+              <h3 class="question-card-title">Составь план выходных с ребёнком</h3>
+              <p class="question-card-desc">Маршрут по дням и запасной вариант, если малыш устанет.</p>
+              <a class="question-card-link" href="#pricing">Подробнее<span class="question-card-link-arrow" aria-hidden="true">→</span></a>
             </li>
             <li class="question-card">
-              <span class="question-visual media-placeholder"></span>
-              <span>Как отучить от соски?</span>
+              <div class="question-card-head">
+                <span class="question-card-icon-wrap">
+                  <img class="question-card-icon" src="./img/hero-icons/growth.svg" alt="" width="24" height="24" decoding="async" />
+                </span>
+                <span class="question-card-cat">Привычки</span>
+              </div>
+              <h3 class="question-card-title">Как отучить от соски?</h3>
+              <p class="question-card-desc">Пошагово и мягко: сначала днём, потом ночью — подстроим под ваш ритм.</p>
+              <a class="question-card-link" href="#pricing">Подробнее<span class="question-card-link-arrow" aria-hidden="true">→</span></a>
             </li>
             <li class="question-card">
-              <span class="question-visual media-placeholder"></span>
-              <span>Какие анализы нужно сдать?</span>
+              <div class="question-card-head">
+                <span class="question-card-icon-wrap">
+                  <img class="question-card-icon" src="./img/hero-icons/copy/shield.svg" alt="" width="24" height="24" decoding="async" />
+                </span>
+                <span class="question-card-cat">Анализы</span>
+              </div>
+              <h3 class="question-card-title">Какие анализы нужно сдать?</h3>
+              <p class="question-card-desc">Сверим с возрастом и жалобами — базовый список и когда срочно к врачу.</p>
+              <a class="question-card-link" href="#pricing">Подробнее<span class="question-card-link-arrow" aria-hidden="true">→</span></a>
             </li>
           </ul>
-
-          <p class="questions-bottom"><span>♥</span>От бытовых вопросов до рекомендаций специалистов</p>
         </div>
       </section>
 
@@ -427,21 +491,27 @@
                   <span class="step-number">1</span>
                   <h3 class="step-title">Пишешь вопрос<br />в чат</h3>
                 </div>
-                <div class="step-visual media-placeholder" aria-hidden="true"></div>
+                <div class="step-visual" aria-hidden="true">
+                  <img class="step-visual-img" src="./img/steps/s1.png" alt="" decoding="async" />
+                </div>
               </li>
               <li class="step-card step-card--process">
                 <div class="step-caption">
                   <span class="step-number">2</span>
                   <h3 class="step-title">AI или консультант<br />разбирается</h3>
                 </div>
-                <div class="step-visual media-placeholder" aria-hidden="true"></div>
+                <div class="step-visual" aria-hidden="true">
+                  <img class="step-visual-img" src="./img/steps/s2.png" alt="" decoding="async" />
+                </div>
               </li>
               <li class="step-card step-card--result">
                 <div class="step-caption">
                   <span class="step-number">3</span>
                   <h3 class="step-title">Ты получаешь готовый<br />ответ или решение</h3>
                 </div>
-                <div class="step-visual media-placeholder" aria-hidden="true"></div>
+                <div class="step-visual" aria-hidden="true">
+                  <img class="step-visual-img" src="./img/steps/s3.png" alt="" decoding="async" />
+                </div>
               </li>
             </ol>
 
@@ -466,7 +536,17 @@
                   <span>мама дочки 1,5 года</span>
                 </span>
               </div>
-              <p>Спросила про сон и получила понятный план без десятков вкладок и тревожных форумов.</p>
+              <p>Спросила про сон и получила понятный <strong>план без десятков вкладок</strong> и тревожных форумов.</p>
+              <div class="review-card-foot">
+                <time class="review-card-date" datetime="2025-01-18">18 января 2025</time>
+                <div class="review-card-stars" aria-label="Оценка 5 из 5">
+                  <span class="review-card-star" aria-hidden="true">★</span>
+                  <span class="review-card-star" aria-hidden="true">★</span>
+                  <span class="review-card-star" aria-hidden="true">★</span>
+                  <span class="review-card-star" aria-hidden="true">★</span>
+                  <span class="review-card-star" aria-hidden="true">★</span>
+                </div>
+              </div>
             </li>
             <li class="review-card">
               <div class="review-person">
@@ -476,7 +556,17 @@
                   <span>мама двоих детей</span>
                 </span>
               </div>
-              <p>Очень выручает, когда нужно быстро понять, что делать сейчас, а что можно спокойно отложить.</p>
+              <p>Очень выручает, когда нужно быстро <strong>понять, что делать сейчас</strong>, а что можно спокойно отложить.</p>
+              <div class="review-card-foot">
+                <time class="review-card-date" datetime="2025-02-03">3 февраля 2025</time>
+                <div class="review-card-stars" aria-label="Оценка 5 из 5">
+                  <span class="review-card-star" aria-hidden="true">★</span>
+                  <span class="review-card-star" aria-hidden="true">★</span>
+                  <span class="review-card-star" aria-hidden="true">★</span>
+                  <span class="review-card-star" aria-hidden="true">★</span>
+                  <span class="review-card-star" aria-hidden="true">★</span>
+                </div>
+              </div>
             </li>
             <li class="review-card">
               <div class="review-person">
@@ -486,7 +576,47 @@
                   <span>мама сына 3 года</span>
                 </span>
               </div>
-              <p>Понравилось, что можно не только спросить AI, но и подключить человека, если вопрос сложный.</p>
+              <p>Понравилось, что можно не только спросить AI, но и <strong>подключить человека</strong>, если вопрос сложный.</p>
+              <div class="review-card-foot">
+                <time class="review-card-date" datetime="2025-02-22">22 февраля 2025</time>
+                <div class="review-card-stars" aria-label="Оценка 5 из 5">
+                  <span class="review-card-star" aria-hidden="true">★</span>
+                  <span class="review-card-star" aria-hidden="true">★</span>
+                  <span class="review-card-star" aria-hidden="true">★</span>
+                  <span class="review-card-star" aria-hidden="true">★</span>
+                  <span class="review-card-star" aria-hidden="true">★</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <ul class="hero-trust-list" aria-label="Почему нам доверяют">
+            <li class="hero-trust-item">
+              <span class="hero-trust-icon hero-trust-icon--heart">
+                <img src="./img/trust-icons/heart.svg" alt="" width="40" height="40" decoding="async" />
+              </span>
+              <span class="hero-trust-copy">
+                <strong>Ты важна</strong>
+                <span>Мы берём на себя рутину, чтобы ты была с ребёнком</span>
+              </span>
+            </li>
+            <li class="hero-trust-item">
+              <span class="hero-trust-icon hero-trust-icon--shield">
+                <img src="./img/trust-icons/shield.svg" alt="" width="40" height="40" decoding="async" />
+              </span>
+              <span class="hero-trust-copy">
+                <strong>Проверенные ответы</strong>
+                <span>Опираемся на опыт экспертов и реальные рекомендации</span>
+              </span>
+            </li>
+            <li class="hero-trust-item">
+              <span class="hero-trust-icon hero-trust-icon--lock">
+                <img src="./img/trust-icons/lock.svg" alt="" width="40" height="40" decoding="async" />
+              </span>
+              <span class="hero-trust-copy">
+                <strong>Конфиденциально</strong>
+                <span>Твои данные и запросы под надёжной защитой</span>
+              </span>
             </li>
           </ul>
         </div>
@@ -495,30 +625,50 @@
       <section class="section section--pricing" id="pricing">
         <div class="section-body section-body--pricing">
           <article class="pricing-panel">
-            <div class="bottom-kicker"><span>♥</span>Выбери удобный формат</div>
+            <header class="pricing-head">
+              <div class="bottom-kicker pricing-kicker"><span>♥</span>Выбери удобный формат</div>
+              <h2 class="pricing-heading">Выберите тариф, который подходит именно вам</h2>
+            </header>
 
             <ul class="pricing-list" aria-label="Тарифы">
               <li class="price-card price-card--base">
-                <div class="price-head">
-                  <span class="price-icon">♧</span>
-                  <h3 class="price-title">Базовый</h3>
+                <div class="price-card-header">
+                  <span class="price-icon-wrap price-icon-wrap--brand">
+                    <img class="price-icon-img" src="./img/msg-gallery/chat.svg" width="24" height="24" alt="" decoding="async" />
+                  </span>
+                  <div class="price-head-text">
+                    <h3 class="price-title">Базовый</h3>
+                    <p class="price-subtitle">Для быстрого ответа на ежедневные вопросы</p>
+                  </div>
                 </div>
-                <p class="price-value"><strong>199 ₽</strong> / мес</p>
+                <div class="price-block">
+                  <p class="price-value"><strong>199 ₽</strong> <span class="price-period">/ мес</span></p>
+                  <p class="price-tagline">Всегда рядом, когда нужно</p>
+                </div>
                 <ul class="price-features">
                   <li>AI-чат для мам</li>
                   <li>Проверенные ответы</li>
                   <li>Быстрые решения</li>
                 </ul>
-                <a class="price-action price-action--base" href="#question">Попробовать</a>
+                <a class="price-action price-action--outline" href="#question">Выбрать</a>
               </li>
               <li class="price-card price-card--featured">
-                <div class="price-head">
-                  <span class="price-icon">♡</span>
-                  <h3 class="price-title">С консультантом</h3>
+                <span class="price-card-badge" aria-hidden="true">⭐ Лучший выбор</span>
+                <div class="price-card-header">
+                  <span class="price-icon-wrap price-icon-wrap--coral">
+                    <img class="price-icon-img" src="./img/trust-icons/heart.svg" width="24" height="24" alt="" decoding="async" />
+                  </span>
+                  <div class="price-head-text">
+                    <h3 class="price-title">С консультантом</h3>
+                    <p class="price-subtitle">Персональная помощь специалиста</p>
+                  </div>
                 </div>
-                <p class="price-value"><strong>3 500 ₽</strong> / мес</p>
+                <div class="price-block">
+                  <p class="price-value"><strong>3 500 ₽</strong> <span class="price-period">/ мес</span></p>
+                  <p class="price-tagline">Поддержка экспертов 1–1</p>
+                </div>
                 <ul class="price-features">
-                  <li>Всё из базового</li>
+                  <li>Всё из базового тарифа</li>
                   <li>Подключение человека</li>
                   <li>Ответ за 1–3 часа</li>
                   <li>Подбор специалистов</li>
@@ -526,22 +676,33 @@
                 <a class="price-action price-action--consult" href="#question">Выбрать</a>
               </li>
               <li class="price-card price-card--vip">
-                <div class="price-head">
-                  <span class="price-icon">♛</span>
-                  <h3 class="price-title">VIP</h3>
+                <div class="price-card-header">
+                  <span class="price-icon-wrap price-icon-wrap--brand">
+                    <span class="price-icon-fallback" aria-hidden="true">♔</span>
+                  </span>
+                  <div class="price-head-text">
+                    <h3 class="price-title">VIP</h3>
+                    <p class="price-subtitle">Максимум поддержки и внимания</p>
+                  </div>
                 </div>
-                <p class="price-value"><strong>25 000 ₽</strong> / мес</p>
+                <div class="price-block">
+                  <p class="price-value"><strong>25 000 ₽</strong> <span class="price-period">/ мес</span></p>
+                  <p class="price-tagline">Ваш личный помощник</p>
+                </div>
                 <ul class="price-features">
                   <li>Личный помощник</li>
                   <li>Решает задачи за тебя</li>
                   <li>Знает твою ситуацию</li>
                   <li>Всегда на связи</li>
                 </ul>
-                <a class="price-action price-action--vip" href="#question">Стать VIP</a>
+                <a class="price-action price-action--outline" href="#question">Выбрать</a>
               </li>
             </ul>
 
-            <p class="pricing-note">Можно изменить тариф в любой момент</p>
+            <p class="pricing-trust">
+              <span class="pricing-trust-icon" aria-hidden="true">✓</span>
+              <span class="pricing-trust-text">Все тарифы можно изменить или отменить в любой момент</span>
+            </p>
           </article>
         </div>
       </section>
@@ -549,25 +710,29 @@
       <section class="section section--benefits" id="benefits">
         <div class="section-body section-body--benefits">
           <article class="benefits-panel">
-            <div class="bottom-kicker"><span>♥</span>Что ты получаешь</div>
-            <h2 class="benefits-title">Больше времени<br />на то, что важно</h2>
+            <div class="benefits-panel-col benefits-panel-col--copy">
+              <div class="bottom-kicker"><span>♥</span>Что ты получаешь</div>
+              <h2 class="benefits-title">Больше времени<br />на то, что важно</h2>
 
-            <ul class="benefit-list" aria-label="Что ты получаешь">
-              <li class="benefit-item">Меньше тревоги и сомнений</li>
-              <li class="benefit-item">Понятные и проверенные ответы</li>
-              <li class="benefit-item">Помощь в сложных ситуациях</li>
-              <li class="benefit-item">Экономия часов каждый день</li>
-              <li class="benefit-item">Больше времени для ребёнка и себя</li>
-            </ul>
+              <ul class="benefit-list" aria-label="Что ты получаешь">
+                <li class="benefit-item">Меньше тревоги и сомнений</li>
+                <li class="benefit-item">Понятные и проверенные ответы</li>
+                <li class="benefit-item">Помощь в сложных ситуациях</li>
+                <li class="benefit-item">Экономия часов каждый день</li>
+                <li class="benefit-item">Больше времени для ребёнка и себя</li>
+              </ul>
+            </div>
 
-            <div class="benefits-side">
-              <div class="benefits-mom media-placeholder" aria-hidden="true"></div>
-              <div class="final-panel">
+            <div class="benefits-panel-col benefits-panel-col--side">
+              <div class="benefits-cta">
                 <div class="final-copy">
                   <h2 class="final-title">Попробуй уже сегодня</h2>
                   <p class="final-subtitle">Первый ответ — и ты почувствуешь разницу</p>
                 </div>
                 <a class="button button--primary button--large" href="#question">Задать вопрос</a>
+              </div>
+              <div class="benefits-visual">
+                <div class="benefits-mom media-placeholder" aria-hidden="true"></div>
               </div>
             </div>
           </article>
@@ -575,17 +740,43 @@
       </section>
 
       <footer class="site-footer">
-        <div class="site-footer-body">
-          <a class="brand-link" href="#top" aria-label="MamaTime">
-            <span class="brand-name">MamaTime</span>
-            <span class="brand-caption">помощник для мам</span>
-          </a>
-          <p class="footer-text">Консьерж-сервис для мам. Помогаем быстрее находить ответы и решения.</p>
-          <nav class="footer-links" aria-label="Навигация в футере">
-            <a href="#steps">Как это работает</a>
-            <a href="#question">Примеры вопросов</a>
-            <a href="#pricing">Тарифы</a>
-          </nav>
+        <div class="site-footer-wrap">
+          <div class="site-footer-body">
+            <nav class="nav-links" aria-label="Навигация в футере">
+              <a class="nav-link" href="#steps">Как это работает</a>
+              <a class="nav-link" href="#question">Примеры вопросов</a>
+              <a class="nav-link" href="#pricing">Тарифы</a>
+              <a class="nav-link" href="#solution">О сервисе</a>
+            </nav>
+            <div class="site-footer-cta">
+              <form class="site-footer-form" action="#" method="post" novalidate>
+                <span class="site-footer-form-label">Узнавать об обновлениях</span>
+                <div class="site-footer-form-row">
+                  <span class="site-footer-input-wrap">
+                    <input
+                      class="site-footer-input"
+                      type="email"
+                      id="site-footer-email"
+                      name="email"
+                      inputmode="email"
+                      autocomplete="email"
+                      placeholder="name@email.com"
+                      aria-label="Email для уведомлений об обновлениях"
+                      required
+                    />
+                  </span>
+                  <button class="site-footer-submit" type="submit">Подписаться</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="site-footer-legal">
+            <p class="site-footer-copyright">
+              <span class="site-footer-copy-text">© 2026 MAMADO. Все права защищены.</span>
+            </p>
+            <p class="site-footer-product">MAMADO — консьерж-сервис для мам</p>
+            <p class="site-footer-legal-sub">Помогаем быстрее находить ответы и решения.</p>
+          </div>
         </div>
       </footer>
     </main>
