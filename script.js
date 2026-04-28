@@ -111,3 +111,186 @@ const footerForm = document.querySelector(".site-footer-form");
 footerForm?.addEventListener("submit", (event) => {
   event.preventDefault();
 });
+
+function renderSolutionPhoneClock() {
+  const el = document.querySelector(".solution-phone-clock");
+  if (!el) return;
+  const now = new Date();
+  const hh = String(now.getHours()).padStart(2, "0");
+  const mm = String(now.getMinutes()).padStart(2, "0");
+  el.textContent = `${hh}:${mm}`;
+  try {
+    el.setAttribute("datetime", now.toISOString());
+  } catch {
+    el.removeAttribute("datetime");
+  }
+}
+
+renderSolutionPhoneClock();
+window.setInterval(renderSolutionPhoneClock, 30000);
+
+(function initHeroTaskHints() {
+  const hintEl = document.querySelector("#hero-hint");
+  const copyEl = document.querySelector("#hero-hint-copy");
+  const bubbles = Array.from(document.querySelectorAll(".task-bubble[data-hero-hint]"));
+  if (!hintEl || !copyEl || bubbles.length === 0) return;
+
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  /** Совпадает с `.hero-hint` выходом opacity/transform 0.3s + запас кадра */
+  const HINT_EXIT_MS = 330;
+  /** Пауза между сменой баблов: показ + выход/вход анимаций + чтение */
+  const AUTOPLAY_MS = 5600;
+  let hideFallbackTimer = 0;
+  let pendingRevealTimer = 0;
+  let autoplayTimer = 0;
+  let nextAutoplayIndex = 0;
+  let hoveringBubble = false;
+
+  function cancelPendingReveal() {
+    window.clearTimeout(pendingRevealTimer);
+    pendingRevealTimer = 0;
+  }
+
+  function onBubbleHideTransitionEnd(event) {
+    if (event.target !== hintEl || event.propertyName !== "opacity") return;
+    finishHintHide();
+  }
+
+  function clearChars() {
+    copyEl.textContent = "";
+  }
+
+  function clearAutoplayActive() {
+    bubbles.forEach((b) => b.classList.remove("is-autoplay-active"));
+  }
+
+  function stopAutoplay() {
+    window.clearInterval(autoplayTimer);
+    autoplayTimer = 0;
+  }
+
+  function runAutoplayTick() {
+    if (hoveringBubble) return;
+    const el = bubbles[nextAutoplayIndex];
+    if (!el) return;
+    clearAutoplayActive();
+    el.classList.add("is-autoplay-active");
+    const text = el.dataset.heroHint;
+    if (text) showHint(text);
+    nextAutoplayIndex = (nextAutoplayIndex + 1) % bubbles.length;
+  }
+
+  function startAutoplay() {
+    stopAutoplay();
+    if (hoveringBubble) return;
+    runAutoplayTick();
+    autoplayTimer = window.setInterval(runAutoplayTick, AUTOPLAY_MS);
+  }
+
+  let hintHideFinished = false;
+
+  function finishHintHide() {
+    if (hintHideFinished) return;
+    hintHideFinished = true;
+    window.clearTimeout(hideFallbackTimer);
+    hintEl.removeEventListener("transitionend", onBubbleHideTransitionEnd);
+    clearChars();
+    if (!hoveringBubble) startAutoplay();
+  }
+
+  function renderHintMarkup(line) {
+    const delayStep = 0.004;
+    const words = line.split(/\s+/).filter(Boolean);
+    let charIndex = 0;
+
+    words.forEach((word, wi) => {
+      const wordWrap = document.createElement("span");
+      wordWrap.className = "hero-hint-word";
+      [...word].forEach((ch) => {
+        const span = document.createElement("span");
+        span.className = "hero-hint-char";
+        span.textContent = ch;
+        span.style.animationDelay = `${charIndex * delayStep}s`;
+        charIndex += 1;
+        wordWrap.appendChild(span);
+      });
+      copyEl.appendChild(wordWrap);
+      if (wi < words.length - 1) {
+        copyEl.appendChild(document.createTextNode(" "));
+      }
+    });
+  }
+
+  function showHint(text) {
+    const line = String(text || "").trim();
+    if (!line) return;
+
+    cancelPendingReveal();
+
+    function revealMounted() {
+      clearChars();
+
+      if (reducedMotion) {
+        copyEl.textContent = line;
+        void hintEl.offsetWidth;
+        hintEl.classList.add("is-visible");
+        return;
+      }
+
+      renderHintMarkup(line);
+      void hintEl.offsetWidth;
+      hintEl.classList.add("is-visible");
+    }
+
+    if (reducedMotion) {
+      hintEl.classList.remove("is-visible");
+      revealMounted();
+      return;
+    }
+
+    const wasVisible = hintEl.classList.contains("is-visible");
+    hintEl.classList.remove("is-visible");
+
+    if (wasVisible) {
+      pendingRevealTimer = window.setTimeout(() => {
+        pendingRevealTimer = 0;
+        revealMounted();
+      }, HINT_EXIT_MS);
+    } else {
+      revealMounted();
+    }
+  }
+
+  function scheduleHide() {
+    hintHideFinished = false;
+    cancelPendingReveal();
+    window.clearTimeout(hideFallbackTimer);
+    hintEl.removeEventListener("transitionend", onBubbleHideTransitionEnd);
+    hintEl.classList.remove("is-visible");
+
+    hintEl.addEventListener("transitionend", onBubbleHideTransitionEnd);
+    hideFallbackTimer = window.setTimeout(finishHintHide, 320);
+  }
+
+  bubbles.forEach((bubble) => {
+    bubble.addEventListener("mouseenter", () => {
+      window.clearTimeout(hideFallbackTimer);
+      cancelPendingReveal();
+      hintEl.removeEventListener("transitionend", onBubbleHideTransitionEnd);
+      hoveringBubble = true;
+      stopAutoplay();
+      clearAutoplayActive();
+      const text = bubble.dataset.heroHint;
+      if (text) showHint(text);
+    });
+    bubble.addEventListener("mouseleave", () => {
+      window.requestAnimationFrame(() => {
+        if (bubbles.some((b) => b.matches(":hover"))) return;
+        hoveringBubble = false;
+        scheduleHide();
+      });
+    });
+  });
+
+  startAutoplay();
+})();

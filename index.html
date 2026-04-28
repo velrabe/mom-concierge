@@ -9,26 +9,28 @@
   </head>
   <body>
     <header class="hero-nav" aria-label="Навигация">
-      <a class="brand-link" href="#top" aria-label="MAMADO">
-        <span class="brand-icon-wrap">
-          <img class="brand-icon" src="./img/logo.svg" alt="" />
-        </span>
-        <span class="brand-copy">
-          <span class="brand-name">MAMADO</span>
-          <span class="brand-caption">Помощник для мам</span>
-        </span>
-      </a>
+      <div class="hero-nav-inner">
+        <a class="brand-link" href="#top" aria-label="MAMADO">
+          <span class="brand-icon-wrap">
+            <img class="brand-icon" src="./img/logo.svg" alt="" />
+          </span>
+          <span class="brand-copy">
+            <span class="brand-name">MAMADO</span>
+            <span class="brand-caption">Помощник для мам</span>
+          </span>
+        </a>
 
-      <nav class="nav-links" aria-label="Разделы">
-        <a class="nav-link" href="#steps">Как это работает</a>
-        <a class="nav-link" href="#question">Примеры вопросов</a>
-        <a class="nav-link" href="#pricing">Тарифы</a>
-        <a class="nav-link" href="#solution">О сервисе</a>
-      </nav>
+        <nav class="nav-links" aria-label="Разделы">
+          <a class="nav-link" href="#steps">Как это работает</a>
+          <a class="nav-link" href="#question">Примеры вопросов</a>
+          <a class="nav-link" href="#pricing">Тарифы</a>
+          <a class="nav-link" href="#solution">О сервисе</a>
+        </nav>
 
-      <div class="nav-actions">
-        <a class="nav-button nav-button--ghost" href="#question">Войти</a>
-        <a class="nav-button nav-button--primary" href="#pricing">Начать</a>
+        <div class="nav-actions">
+          <a class="nav-button nav-button--ghost" href="#question">Войти</a>
+          <a class="nav-button nav-button--primary" href="#pricing">Начать</a>
+        </div>
       </div>
     </header>
 
@@ -57,7 +59,9 @@
 
               <div class="hero-action-group">
                 <div class="button-row">
-                  <a class="button button--primary" href="#pricing">Попробовать бесплатно</a>
+                  <a class="button button--primary" href="#pricing">
+                    <span class="button-primary-label">Попробовать бесплатно</span>
+                  </a>
                   <a class="button button--ghost" href="#question">
                     <span class="button-icon" aria-hidden="true">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
@@ -96,20 +100,25 @@
 
             <div class="hero-visual" aria-hidden="true">
               <div class="hero-scene">
+                <div class="hero-hint-wrap">
+                  <div class="hero-hint" id="hero-hint" aria-live="polite">
+                    <div class="hero-hint-copy" id="hero-hint-copy" role="status"></div>
+                  </div>
+                </div>
                 <div class="task-bubble-group task-bubble-group--left">
-                  <div class="task-bubble task-bubble--tilt-3">
+                  <div class="task-bubble task-bubble--tilt-3" data-hero-hint="Подстрою режим и ритуал под возраст — спокойнее ночи и меньше сюрпризов." data-task="сон">
                     <span class="task-icon">
                       <img src="./img/hero-icons/sleep.svg" alt="" width="24" height="24" decoding="async" />
                     </span>
                     <span class="task-text">сон</span>
                   </div>
-                  <div class="task-bubble">
+                  <div class="task-bubble" data-hero-hint="Подберу варианты рядом с вами и список вопросов врачу на приём." data-task="врач">
                     <span class="task-icon">
                       <img src="./img/hero-icons/doctor.svg" alt="" width="24" height="24" decoding="async" />
                     </span>
                     <span class="task-text">врач</span>
                   </div>
-                  <div class="task-bubble task-bubble--tilt-n3">
+                  <div class="task-bubble task-bubble--tilt-n3" data-hero-hint="Сузим выбор и подскажу, что взять по бюджету и ситуации." data-task="покупки">
                     <span class="task-icon">
                       <img src="./img/hero-icons/shop.svg" alt="" width="24" height="24" decoding="async" />
                     </span>
@@ -117,19 +126,19 @@
                   </div>
                 </div>
                 <div class="task-bubble-group task-bubble-group--right">
-                  <div class="task-bubble task-bubble--tilt-n3">
+                  <div class="task-bubble task-bubble--tilt-n3" data-hero-hint="Соберу перекусы и рацион под возраст и ваши правила." data-task="питание">
                     <span class="task-icon">
                       <img src="./img/hero-icons/food.svg" alt="" width="24" height="24" decoding="async" />
                     </span>
                     <span class="task-text">питание</span>
                   </div>
-                  <div class="task-bubble">
+                  <div class="task-bubble" data-hero-hint="Предложу игры и шаги по возрасту без лишнего давления." data-task="развитие">
                     <span class="task-icon">
                       <img src="./img/hero-icons/growth.svg" alt="" width="24" height="24" decoding="async" />
                     </span>
                     <span class="task-text">развитие</span>
                   </div>
-                  <div class="task-bubble task-bubble--tilt-3">
+                  <div class="task-bubble task-bubble--tilt-3" data-hero-hint="Составлю план дня с запасным сценарием, если устанете." data-task="планы">
                     <span class="task-icon">
                       <img src="./img/hero-icons/calendar.svg" alt="" width="24" height="24" decoding="async" />
                     </span>
@@ -320,187 +329,34 @@
                   </button>
                 </li>
               </ul>
-              <div class="solution-experts" aria-label="Категории экспертов">
+              <div class="solution-experts" aria-label="Направления экспертов">
                 <ul class="solution-experts-list">
                   <li class="solution-expert">
-                    <div class="solution-expert-card">
-                      <div class="solution-expert-photo-wrap">
-                        <img
-                          class="solution-expert-photo"
-                          src="https://i.pravatar.cc/80?u=mamado-1"
-                          width="40"
-                          height="40"
-                          alt=""
-                          loading="lazy"
-                          decoding="async"
-                        />
-                      </div>
-                      <div class="solution-expert-text">
-                        <span class="solution-expert-name">Ирина В.</span>
-                        <span class="solution-expert-role">Педиатр</span>
-                        <span class="solution-expert-rating">★ 4.9</span>
-                      </div>
-                    </div>
+                    <span class="solution-expert-chip"><span class="solution-expert-label">Педиатрия и врачи</span></span>
                   </li>
                   <li class="solution-expert">
-                    <div class="solution-expert-card">
-                      <div class="solution-expert-photo-wrap">
-                        <img
-                          class="solution-expert-photo"
-                          src="https://i.pravatar.cc/80?u=mamado-2"
-                          width="40"
-                          height="40"
-                          alt=""
-                          loading="lazy"
-                          decoding="async"
-                        />
-                      </div>
-                      <div class="solution-expert-text">
-                        <span class="solution-expert-name">Мария А.</span>
-                        <span class="solution-expert-role">Сон</span>
-                        <span class="solution-expert-rating">★ 4.8</span>
-                      </div>
-                    </div>
+                    <span class="solution-expert-chip"><span class="solution-expert-label">Сон и режим</span></span>
                   </li>
                   <li class="solution-expert">
-                    <div class="solution-expert-card">
-                      <div class="solution-expert-photo-wrap">
-                        <img
-                          class="solution-expert-photo"
-                          src="https://i.pravatar.cc/80?u=mamado-3"
-                          width="40"
-                          height="40"
-                          alt=""
-                          loading="lazy"
-                          decoding="async"
-                        />
-                      </div>
-                      <div class="solution-expert-text">
-                        <span class="solution-expert-name">Ольга Л.</span>
-                        <span class="solution-expert-role">ГВ</span>
-                        <span class="solution-expert-rating">★ 5.0</span>
-                      </div>
-                    </div>
+                    <span class="solution-expert-chip"><span class="solution-expert-label">Грудное вскармливание</span></span>
                   </li>
                   <li class="solution-expert">
-                    <div class="solution-expert-card">
-                      <div class="solution-expert-photo-wrap">
-                        <img
-                          class="solution-expert-photo"
-                          src="https://i.pravatar.cc/80?u=mamado-4"
-                          width="40"
-                          height="40"
-                          alt=""
-                          loading="lazy"
-                          decoding="async"
-                        />
-                      </div>
-                      <div class="solution-expert-text">
-                        <span class="solution-expert-name">Екатерина С.</span>
-                        <span class="solution-expert-role">Психолог</span>
-                        <span class="solution-expert-rating">★ 4.9</span>
-                      </div>
-                    </div>
+                    <span class="solution-expert-chip"><span class="solution-expert-label">Психология и поддержка</span></span>
                   </li>
                   <li class="solution-expert">
-                    <div class="solution-expert-card">
-                      <div class="solution-expert-photo-wrap">
-                        <img
-                          class="solution-expert-photo"
-                          src="https://i.pravatar.cc/80?u=mamado-5"
-                          width="40"
-                          height="40"
-                          alt=""
-                          loading="lazy"
-                          decoding="async"
-                        />
-                      </div>
-                      <div class="solution-expert-text">
-                        <span class="solution-expert-name">Анна К.</span>
-                        <span class="solution-expert-role">Диетолог</span>
-                        <span class="solution-expert-rating">★ 4.8</span>
-                      </div>
-                    </div>
+                    <span class="solution-expert-chip"><span class="solution-expert-label">Детское питание</span></span>
                   </li>
                   <li class="solution-expert">
-                    <div class="solution-expert-card">
-                      <div class="solution-expert-photo-wrap">
-                        <img
-                          class="solution-expert-photo"
-                          src="https://i.pravatar.cc/80?u=mamado-6"
-                          width="40"
-                          height="40"
-                          alt=""
-                          loading="lazy"
-                          decoding="async"
-                        />
-                      </div>
-                      <div class="solution-expert-text">
-                        <span class="solution-expert-name">Светлана О.</span>
-                        <span class="solution-expert-role">Развитие</span>
-                        <span class="solution-expert-rating">★ 4.9</span>
-                      </div>
-                    </div>
+                    <span class="solution-expert-chip"><span class="solution-expert-label">Развитие и занятия</span></span>
                   </li>
                   <li class="solution-expert">
-                    <div class="solution-expert-card">
-                      <div class="solution-expert-photo-wrap">
-                        <img
-                          class="solution-expert-photo"
-                          src="https://i.pravatar.cc/80?u=mamado-7"
-                          width="40"
-                          height="40"
-                          alt=""
-                          loading="lazy"
-                          decoding="async"
-                        />
-                      </div>
-                      <div class="solution-expert-text">
-                        <span class="solution-expert-name">Дарья Ф.</span>
-                        <span class="solution-expert-role">Няня</span>
-                        <span class="solution-expert-rating">★ 5.0</span>
-                      </div>
-                    </div>
+                    <span class="solution-expert-chip"><span class="solution-expert-label">Няня и уход</span></span>
                   </li>
                   <li class="solution-expert">
-                    <div class="solution-expert-card">
-                      <div class="solution-expert-photo-wrap">
-                        <img
-                          class="solution-expert-photo"
-                          src="https://i.pravatar.cc/80?u=mamado-8"
-                          width="40"
-                          height="40"
-                          alt=""
-                          loading="lazy"
-                          decoding="async"
-                        />
-                      </div>
-                      <div class="solution-expert-text">
-                        <span class="solution-expert-name">Алексей С.</span>
-                        <span class="solution-expert-role">Нутрициолог</span>
-                        <span class="solution-expert-rating">★ 4.8</span>
-                      </div>
-                    </div>
+                    <span class="solution-expert-chip"><span class="solution-expert-label">Нутрициология (питание)</span></span>
                   </li>
                   <li class="solution-expert">
-                    <div class="solution-expert-card">
-                      <div class="solution-expert-photo-wrap">
-                        <img
-                          class="solution-expert-photo"
-                          src="https://i.pravatar.cc/80?u=mamado-9"
-                          width="40"
-                          height="40"
-                          alt=""
-                          loading="lazy"
-                          decoding="async"
-                        />
-                      </div>
-                      <div class="solution-expert-text">
-                        <span class="solution-expert-name">Юлия Н.</span>
-                        <span class="solution-expert-role">Стилист</span>
-                        <span class="solution-expert-rating">★ 4.9</span>
-                      </div>
-                    </div>
+                    <span class="solution-expert-chip"><span class="solution-expert-label">Стилист и образ</span></span>
                   </li>
                 </ul>
               </div>
@@ -512,17 +368,61 @@
               </p>
             </div>
 
+            <div class="solution-phone-wrap">
             <div class="solution-phone" aria-label="Пример чата MAMADO">
-              <div class="solution-phone-island" aria-hidden="true"></div>
-              <div class="solution-phone-header">
-                <span class="solution-phone-manager-icon">M</span>
-                <span class="solution-phone-manager-copy">
-                  <span class="solution-phone-manager-title">Ваш менеджер MAMADO</span>
-                  <span class="solution-phone-manager-status">
-                    <span class="solution-phone-status-dot"></span>
-                    <span>Онлайн</span>
+              <div class="solution-phone-top">
+                <div class="solution-phone-status-row">
+                  <div class="solution-phone-status-leading">
+                    <time class="solution-phone-clock" datetime="">9:41</time>
+                  </div>
+                  <div class="solution-phone-island-shell" aria-hidden="true">
+                    <span class="solution-phone-island"></span>
+                  </div>
+                  <div class="solution-phone-status-trailing">
+                    <span class="solution-phone-status-icon-wrap">
+                      <svg
+                        class="solution-phone-status-icon solution-phone-status-icon--wifi"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="m6.35 15.35l-2.1-2.15q1.55-1.55 3.55-2.375T12 10t4.213.838t3.537 2.412l-2.1 2.1q-1.125-1.125-2.588-1.737T12 13t-3.062.613T6.35 15.35M2.1 11.1L0 9q2.375-2.425 5.488-3.713T12 4t6.513 1.288T24 9l-2.1 2.1q-1.975-1.975-4.538-3.037T12 7T6.637 8.063T2.1 11.1M12 21l-3.525-3.55q.7-.7 1.613-1.075T12 16t1.913.375t1.612 1.075z"
+                        />
+                      </svg>
+                    </span>
+                    <span class="solution-phone-status-icon-wrap">
+                      <svg
+                        class="solution-phone-status-icon solution-phone-status-icon--battery"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <path fill="currentColor" d="M16 6H4a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2" />
+                        <path
+                          fill="currentColor"
+                          d="M22 13.5v-3a1 1 0 0 0-1-1v5a1 1 0 0 0 1-1"
+                          opacity="0.6"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="solution-phone-header">
+                  <span class="solution-phone-manager-icon">M</span>
+                  <span class="solution-phone-manager-copy">
+                    <span class="solution-phone-manager-title">Ваш менеджер MAMADO</span>
+                    <span class="solution-phone-manager-online">
+                      <span class="solution-phone-status-dot"></span>
+                      <span>Онлайн</span>
+                    </span>
                   </span>
-                </span>
+                </div>
               </div>
 
               <div class="solution-phone-screen">
@@ -591,8 +491,10 @@
                       </svg>
                     </button>
                   </div>
+                  <div class="solution-phone-home-bar" aria-hidden="true"></div>
                 </div>
               </div>
+            </div>
             </div>
           </div>
         </div>
@@ -697,24 +599,33 @@
               <li class="step-card step-card--process">
                 <div class="step-caption">
                   <span class="step-number">2</span>
-                  <h3 class="step-title">AI или консультант<br />разбирается</h3>
+                  <h3 class="step-title">На вопрос сразу отвечает<br />AI-консультант</h3>
                 </div>
                 <div class="step-visual" aria-hidden="true">
                   <img class="step-visual-img" src="./img/steps/s2.png" alt="" decoding="async" />
                 </div>
               </li>
-              <li class="step-card step-card--result">
+              <li class="step-card step-card--manager">
                 <div class="step-caption">
                   <span class="step-number">3</span>
-                  <h3 class="step-title">Ты получаешь готовый<br />ответ или решение</h3>
+                  <h3 class="step-title">Или направляешь вопрос<br />к твоему личному менеджеру</h3>
+                </div>
+                <div class="step-visual" aria-hidden="true">
+                  <img class="step-visual-img" src="./img/steps/s-manager.png" alt="" decoding="async" />
+                </div>
+              </li>
+              <li class="step-card step-card--result">
+                <div class="step-caption">
+                  <span class="step-number">4</span>
+                  <h3 class="step-title">
+                    Ты получаешь готовый ответ<br />и возможность подключить узкого специалиста к решению
+                  </h3>
                 </div>
                 <div class="step-visual" aria-hidden="true">
                   <img class="step-visual-img" src="./img/steps/s3.png" alt="" decoding="async" />
                 </div>
               </li>
             </ol>
-
-            <div class="steps-family media-placeholder" aria-hidden="true"></div>
           </div>
         </div>
       </section>
@@ -729,7 +640,9 @@
           <ul class="reviews-list" aria-label="Отзывы мам">
             <li class="review-card">
               <div class="review-person">
-                <span class="review-avatar">А</span>
+                <span class="review-avatar-wrap">
+                  <img class="review-avatar-img" src="./img/reviews/review-1.jpg" alt="" width="48" height="48" decoding="async" />
+                </span>
                 <span>
                   <strong>Анна</strong>
                   <span>мама дочки 1,5 года</span>
@@ -749,7 +662,9 @@
             </li>
             <li class="review-card">
               <div class="review-person">
-                <span class="review-avatar">М</span>
+                <span class="review-avatar-wrap">
+                  <img class="review-avatar-img" src="./img/reviews/review-2.jpg" alt="" width="48" height="48" decoding="async" />
+                </span>
                 <span>
                   <strong>Мария</strong>
                   <span>мама двоих детей</span>
@@ -769,7 +684,9 @@
             </li>
             <li class="review-card">
               <div class="review-person">
-                <span class="review-avatar">К</span>
+                <span class="review-avatar-wrap">
+                  <img class="review-avatar-img" src="./img/reviews/review-3.jpg" alt="" width="48" height="48" decoding="async" />
+                </span>
                 <span>
                   <strong>Ксения</strong>
                   <span>мама сына 3 года</span>
@@ -826,9 +743,8 @@
           <article class="pricing-panel">
             <header class="pricing-head">
               <div class="bottom-kicker pricing-kicker"><span>♥</span>Услуги</div>
-              <h2 class="pricing-heading">Виды запросов</h2>
+              <h2 class="pricing-heading">Без подписки. Платите только за реальные запросы.</h2>
               <div class="pricing-pitch">
-                <p class="pricing-pitch-line">Без подписки. Платите только за реальные запросы.</p>
                 <p class="pricing-pitch-line">
                   Попробуйте бесплатно – начислим первые 500 монет в подарок.
                 </p>
@@ -897,7 +813,7 @@
                     <span class="price-feature-text">Проверит и даст готовое решение</span>
                   </li>
                 </ul>
-                <a class="price-action price-action--consult" href="#question">Выбрать</a>
+                <a class="price-action price-action--consult" href="#question">Попробовать бесплатно</a>
               </li>
               <li class="price-card price-card--expert">
                 <div class="price-card-header">
@@ -928,7 +844,7 @@
                     <span class="price-feature-text">Сами подготовим вопросы и цели</span>
                   </li>
                 </ul>
-                <a class="price-action price-action--outline" href="#question">Подключить эксперта</a>
+                <a class="price-action price-action--outline" href="#question">Попробовать бесплатно</a>
               </li>
             </ul>
 
@@ -945,47 +861,38 @@
       <section class="section section--benefits" id="benefits">
         <div class="section-body section-body--benefits">
           <article class="benefits-panel">
-            <div class="benefits-panel-col benefits-panel-col--copy">
-              <div class="bottom-kicker"><span>♥</span>Что ты получаешь</div>
-              <h2 class="benefits-title">Больше времени<br />на то, что важно</h2>
-
-              <ul class="benefit-list" aria-label="Что ты получаешь">
-                <li class="benefit-item">Меньше тревоги и сомнений</li>
-                <li class="benefit-item">Понятные и проверенные ответы</li>
-                <li class="benefit-item">Помощь в сложных ситуациях</li>
-                <li class="benefit-item">Экономия часов каждый день</li>
-                <li class="benefit-item">Больше времени для ребёнка и себя</li>
-              </ul>
-            </div>
-
-            <div class="benefits-panel-col benefits-panel-col--side">
-              <div class="benefits-cta-band">
-                <div class="benefits-cta-decor benefits-cta-decor--left" aria-hidden="true"></div>
-                <div class="benefits-cta-decor benefits-cta-decor--right" aria-hidden="true"></div>
-                <div class="benefits-cta-inner">
-                  <div class="benefits-cta-main">
-                    <div class="final-copy">
-                      <h2 class="final-title">Попробуй уже сегодня</h2>
-                      <p class="final-subtitle">Первый ответ — и ты почувствуешь разницу</p>
-                    </div>
-                    <div class="benefits-cta-button-wrap">
-                      <a class="button button--primary button--large benefits-cta-button" href="#question">
-                        <span class="button-text-wrap">
-                          <span class="button-text">Задать вопрос</span>
-                        </span>
-                      </a>
-                    </div>
+            <div class="benefits-cta-band">
+              <div class="benefits-cta-decor benefits-cta-decor--left" aria-hidden="true"></div>
+              <div class="benefits-cta-decor benefits-cta-decor--right" aria-hidden="true"></div>
+              <div class="benefits-cta-inner">
+                <div class="benefits-cta-main">
+                  <div class="bottom-kicker"><span>♥</span>Что ты получаешь</div>
+                  <div class="final-copy">
+                    <h2 class="final-title">Попробуй уже сегодня</h2>
+                    <p class="final-subtitle">Первый ответ — и ты почувствуешь разницу</p>
                   </div>
-                  <div class="benefits-cta-art">
-                    <img
-                      class="benefits-cta-image"
-                      src="./img/benefits/cta-illustration.png"
-                      width="320"
-                      height="200"
-                      alt=""
-                      decoding="async"
-                    />
+                  <ul class="benefit-list" aria-label="Что ты получаешь">
+                    <li class="benefit-item">Меньше тревоги и сомнений</li>
+                    <li class="benefit-item">Понятные и проверенные ответы</li>
+                    <li class="benefit-item">Помощь в сложных ситуациях</li>
+                  </ul>
+                  <div class="benefits-cta-button-wrap">
+                    <a class="button button--primary button--large benefits-cta-button" href="#question">
+                      <span class="button-text-wrap">
+                        <span class="button-text">Задать вопрос</span>
+                      </span>
+                    </a>
                   </div>
+                </div>
+                <div class="benefits-cta-art">
+                  <img
+                    class="benefits-cta-image"
+                    src="./img/footer-decor/banner.png"
+                    width="512"
+                    height="512"
+                    alt=""
+                    decoding="async"
+                  />
                 </div>
               </div>
             </div>
