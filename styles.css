@@ -860,8 +860,8 @@ a {
   overflow-wrap: normal;
 }
 
-.hero-hint.is-visible .hero-hint-copy {
-  animation-name: hero-hint-copy-drift;
+.hero-hint-wrap:has(#hero-hint.is-visible) {
+  animation-name: hero-hint-wrap-drift;
   animation-duration: 2.6s;
   animation-timing-function: ease-in-out;
   animation-delay: 0.33s;
@@ -892,16 +892,16 @@ a {
   }
 }
 
-@keyframes hero-hint-copy-drift {
+@keyframes hero-hint-wrap-drift {
   0%,
   100% {
+    transform: translate(-50%, calc(-50% + 4rem));
     opacity: 1;
-    transform: translateY(0);
   }
 
   50% {
+    transform: translate(-50%, calc(-50% + 4rem - 0.25rem));
     opacity: 0.8;
-    transform: translateY(-0.25rem);
   }
 }
 
@@ -1052,7 +1052,7 @@ a {
       visibility 0s linear 0s;
   }
 
-  .hero-hint.is-visible .hero-hint-copy {
+  .hero-hint-wrap {
     animation: none;
   }
 
