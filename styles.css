@@ -808,13 +808,14 @@ a {
 
 .hero-hint-wrap {
   position: absolute;
-  z-index: 5;
-  top: 45%;
-  left: 50%;
+  z-index: 7;
+  top: 3rem;
+  right: 3rem;
+  left: auto;
   width: min(94%, 18rem);
   margin: 0;
   padding: 0;
-  transform: translate(-50%, calc(-50% + 4rem));
+  transform: translate(0, 0);
   pointer-events: none;
 }
 
@@ -826,7 +827,7 @@ a {
   opacity: 0;
   margin: 0;
   padding: 0.875rem 1rem 1rem;
-  border-radius: 1.375rem 0.25rem 1.375rem 1.375rem;
+  border-radius: 1.375rem 1.375rem 1.375rem 0.25rem;
   color: #342d31;
   font-size: 1.125rem;
   line-height: 1.5;
@@ -835,7 +836,7 @@ a {
   box-shadow: 0 1rem 2.75rem rgba(81, 57, 50, 0.16);
   text-align: left;
   backdrop-filter: blur(0.5rem);
-  transform: translateY(0.625rem) rotate(0deg);
+  transform: translateY(0.625rem) rotate(3deg);
   transition:
     opacity 0.3s ease,
     visibility 0s linear 0.3s,
@@ -845,7 +846,7 @@ a {
 .hero-hint.is-visible {
   visibility: visible;
   opacity: 1;
-  transform: translateY(0) rotate(-3deg);
+  transform: translateY(0) rotate(3deg);
   transition:
     opacity 0.3s ease,
     visibility 0s linear 0s,
@@ -895,12 +896,12 @@ a {
 @keyframes hero-hint-wrap-drift {
   0%,
   100% {
-    transform: translate(-50%, calc(-50% + 4rem));
+    transform: translate(0, 0);
     opacity: 1;
   }
 
   50% {
-    transform: translate(-50%, calc(-50% + 4rem - 0.25rem));
+    transform: translate(0, -0.25rem);
     opacity: 0.8;
   }
 }
@@ -1046,7 +1047,7 @@ a {
 
   .hero-hint.is-visible {
     animation: none;
-    transform: rotate(-3deg);
+    transform: rotate(3deg);
     transition:
       opacity 0.3s ease,
       visibility 0s linear 0s;
@@ -4259,7 +4260,7 @@ a {
   }
 
   .hero-hint {
-    border-radius: 1.0625rem 0.1875rem 1.0625rem 1.0625rem;
+    border-radius: 1.0625rem 1.0625rem 1.0625rem 0.1875rem;
     font-size: 1rem;
     line-height: 1.5;
     letter-spacing: 0;
