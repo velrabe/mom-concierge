@@ -31,8 +31,79 @@
           <a class="nav-button nav-button--ghost" href="#question">Войти</a>
           <a class="nav-button nav-button--primary" href="#pricing">Начать</a>
         </div>
+
+        <button
+          class="hero-nav-burger"
+          type="button"
+          id="mobile-menu-toggle"
+          aria-expanded="false"
+          aria-controls="mobile-nav-dialog"
+          aria-label="Открыть меню"
+        >
+          <span class="hero-nav-burger-icon-wrap">
+            <span class="hero-nav-burger-lines" aria-hidden="true">
+              <svg
+                class="hero-nav-burger-menu-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z" />
+              </svg>
+            </span>
+            <span class="hero-nav-burger-x" aria-hidden="true">
+              <svg
+                class="hero-nav-burger-x-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  d="M6 6l12 12M18 6L6 18"
+                />
+              </svg>
+            </span>
+          </span>
+          <span class="hero-nav-burger-copy">
+            <span class="hero-nav-burger-label hero-nav-burger-label--open">Меню</span>
+            <span class="hero-nav-burger-label hero-nav-burger-label--close">Закрыть</span>
+          </span>
+        </button>
       </div>
     </header>
+
+    <div
+      id="mobile-nav-dialog"
+      class="mobile-nav"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Меню"
+      hidden
+      aria-hidden="true"
+    >
+      <div class="mobile-nav-sheet">
+        <div class="mobile-nav-body">
+          <nav class="mobile-nav-primary" aria-label="Разделы">
+            <a class="mobile-nav-link" href="#steps">Как это работает</a>
+            <a class="mobile-nav-link" href="#question">Примеры вопросов</a>
+            <a class="mobile-nav-link" href="#pricing">Тарифы</a>
+            <a class="mobile-nav-link" href="#solution">О сервисе</a>
+          </nav>
+        </div>
+        <div class="mobile-nav-footer">
+          <a class="nav-button nav-button--ghost" href="#question">Войти</a>
+          <a class="nav-button nav-button--primary" href="#pricing">Начать</a>
+        </div>
+      </div>
+    </div>
 
     <main class="page">
       <section class="section section--hero" id="top">
@@ -100,8 +171,41 @@
 
             <div class="hero-visual" aria-hidden="true">
               <div class="hero-scene">
+                <div class="hero-ai-helper-wrap">
+                  <div class="hero-ai-helper-stack">
+                    <img class="hero-ai-helper" src="./img/ai-helper.png" alt="" decoding="async" />
+                    <span class="hero-ai-helper-glare-wrap">
+                      <img
+                        class="hero-ai-helper-stroke"
+                        src="./img/ai-helper-fx-stroke.png"
+                        alt=""
+                        decoding="async"
+                        aria-hidden="true"
+                      />
+                    </span>
+                  </div>
+                </div>
+
                 <div class="hero-hint-wrap">
                   <div class="hero-hint" id="hero-hint" aria-live="polite">
+                    <div
+                      class="hero-hint-topic-row hero-hint-topic-row--hidden"
+                      aria-hidden="true"
+                    >
+                      <span class="hero-hint-topic-icon-wrap">
+                        <span class="hero-hint-topic-icon-inner">
+                          <img
+                            class="hero-hint-topic-icon-img"
+                            id="hero-hint-topic-icon"
+                            alt=""
+                            decoding="async"
+                          />
+                        </span>
+                      </span>
+                      <span class="hero-hint-topic-label-wrap">
+                        <span class="hero-hint-topic-label" id="hero-hint-topic-label"></span>
+                      </span>
+                    </div>
                     <div class="hero-hint-copy" id="hero-hint-copy" role="status"></div>
                     <div class="hero-hint-horn-wrap" aria-hidden="true">
                       <span class="hero-hint-horn-icon-wrap">
@@ -268,20 +372,24 @@
             </ul>
 
             <div class="pain-bottom">
-              <div class="pain-bottom-icon" aria-hidden="true">
-                <svg class="pain-bottom-icon-svg" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
-                  <path fill="currentColor" d="m12 21l-1.45-1.3C5.4 15.08 2 12.03 2 8.3C2 5.25 4.42 3 7.35 3c1.65 0 3.24.77 4.25 1.98C12.61 3.77 14.2 3 15.85 3C18.78 3 21.2 5.25 21.2 8.3c0 3.73-3.4 6.78-8.55 11.4z" />
-                </svg>
-              </div>
-              <div class="pain-bottom-copy">
-                <p class="pain-bottom-title">Мы убираем этот шум и берём всё на себя</p>
-                <p class="pain-bottom-text">
-                  Мы не снимаем вашу ценность, вы всегда знаете лучше. Но мы берём на себя всё, что можно
-                  делегировать, чтобы у вас появилось время на самое важное – вашу семью и себя.
-                </p>
-              </div>
-              <div class="pain-bottom-decor" aria-hidden="true">
-                <img class="pain-bottom-decor-image" src="./img/pain/heart.svg" alt="" />
+              <div class="pain-bottom-band">
+                <div class="pain-bottom-inner">
+                  <div class="pain-bottom-icon" aria-hidden="true">
+                    <svg class="pain-bottom-icon-svg" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="m12 21l-1.45-1.3C5.4 15.08 2 12.03 2 8.3C2 5.25 4.42 3 7.35 3c1.65 0 3.24.77 4.25 1.98C12.61 3.77 14.2 3 15.85 3C18.78 3 21.2 5.25 21.2 8.3c0 3.73-3.4 6.78-8.55 11.4z" />
+                    </svg>
+                  </div>
+                  <div class="pain-bottom-copy">
+                    <p class="pain-bottom-title">Мы убираем этот шум и берём всё&nbsp;на себя</p>
+                    <p class="pain-bottom-text">
+                      Мы не снимаем вашу ценность, вы всегда знаете лучше. Но мы берём на себя всё, что можно
+                      делегировать, чтобы у вас появилось время на самое важное – вашу семью и себя.
+                    </p>
+                  </div>
+                  <div class="pain-bottom-decor" aria-hidden="true">
+                    <img class="pain-bottom-decor-image" src="./img/pain/heart.svg" alt="" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -320,7 +428,7 @@
         <div class="section-body section-body--solution">
           <div class="solution-layout">
             <div class="solution-copy">
-              <div class="solution-kicker"><span>♥</span>Решение</div>
+              <div class="solution-kicker">Решение</div>
               <h2 class="solution-title">
                 <span>Один сервис</span>
                 <span>вместо десятков специалистов</span>
@@ -330,11 +438,11 @@
                 бесконечного поиска, форумов и сомнений.
               </p>
               <ul class="solution-feature-list" aria-label="Что внутри сервиса">
-                <li class="solution-feature is-active">
+                <li class="solution-feature solution-feature--ai is-active">
                   <button class="solution-feature-button" type="button" data-solution-tab="0" aria-pressed="true">
                     <span class="solution-feature-accent" aria-hidden="true"></span>
                     <span class="solution-feature-icon-wrap">
-                      <img class="solution-feature-icon-img" src="./img/msg-gallery/ai.svg" width="32" height="32" alt="" decoding="async" />
+                      <img class="solution-feature-icon-img" src="./img/msg-gallery/feature-ai-yellow.svg" width="32" height="32" alt="" decoding="async" />
                     </span>
                     <span class="solution-feature-copy">
                       <span class="solution-feature-title">Умный AI</span>
@@ -344,11 +452,11 @@
                     </span>
                   </button>
                 </li>
-                <li class="solution-feature">
+                <li class="solution-feature solution-feature--manager">
                   <button class="solution-feature-button" type="button" data-solution-tab="1" aria-pressed="false">
                     <span class="solution-feature-accent" aria-hidden="true"></span>
                     <span class="solution-feature-icon-wrap">
-                      <img class="solution-feature-icon-img" src="./img/msg-gallery/chat.svg" width="32" height="32" alt="" decoding="async" />
+                      <img class="solution-feature-icon-img" src="./img/msg-gallery/feature-chat-blue.svg" width="32" height="32" alt="" decoding="async" />
                     </span>
                     <span class="solution-feature-copy">
                       <span class="solution-feature-title">Твой личный менеджер</span>
@@ -356,11 +464,11 @@
                     </span>
                   </button>
                 </li>
-                <li class="solution-feature">
+                <li class="solution-feature solution-feature--specialists">
                   <button class="solution-feature-button" type="button" data-solution-tab="2" aria-pressed="false">
                     <span class="solution-feature-accent" aria-hidden="true"></span>
                     <span class="solution-feature-icon-wrap">
-                      <img class="solution-feature-icon-img" src="./img/msg-gallery/shield.svg" width="32" height="32" alt="" decoding="async" />
+                      <img class="solution-feature-icon-img" src="./img/msg-gallery/feature-shield-green.svg" width="32" height="32" alt="" decoding="async" />
                     </span>
                     <span class="solution-feature-copy">
                       <span class="solution-feature-title">Проверенные специалисты</span>
@@ -369,46 +477,30 @@
                   </button>
                 </li>
               </ul>
-              <div class="solution-experts" aria-label="Направления экспертов">
-                <ul class="solution-experts-list">
-                  <li class="solution-expert">
-                    <span class="solution-expert-chip"><span class="solution-expert-label">Педиатрия и врачи</span></span>
-                  </li>
-                  <li class="solution-expert">
-                    <span class="solution-expert-chip"><span class="solution-expert-label">Сон и режим</span></span>
-                  </li>
-                  <li class="solution-expert">
-                    <span class="solution-expert-chip"><span class="solution-expert-label">Грудное вскармливание</span></span>
-                  </li>
-                  <li class="solution-expert">
-                    <span class="solution-expert-chip"><span class="solution-expert-label">Психология и поддержка</span></span>
-                  </li>
-                  <li class="solution-expert">
-                    <span class="solution-expert-chip"><span class="solution-expert-label">Детское питание</span></span>
-                  </li>
-                  <li class="solution-expert">
-                    <span class="solution-expert-chip"><span class="solution-expert-label">Развитие и занятия</span></span>
-                  </li>
-                  <li class="solution-expert">
-                    <span class="solution-expert-chip"><span class="solution-expert-label">Няня и уход</span></span>
-                  </li>
-                  <li class="solution-expert">
-                    <span class="solution-expert-chip"><span class="solution-expert-label">Нутрициология (питание)</span></span>
-                  </li>
-                  <li class="solution-expert">
-                    <span class="solution-expert-chip"><span class="solution-expert-label">Стилист и образ</span></span>
-                  </li>
-                </ul>
-              </div>
               <p class="solution-feature-foot">
                 <span class="solution-feature-foot-icon-wrap">
-                  <img class="solution-feature-foot-icon" src="./img/msg-gallery/shield.svg" width="24" height="24" alt="" decoding="async" />
+                  <img class="solution-feature-foot-icon" src="./img/msg-gallery/feature-shield-green.svg" width="24" height="24" alt="" decoding="async" />
                 </span>
                 <span class="solution-feature-foot-text">Мы проверяем всех специалистов и сервисы вручную</span>
               </p>
             </div>
 
             <div class="solution-phone-wrap">
+            <div class="solution-phone-stage" role="group" aria-label="Направления экспертов">
+              <ul class="solution-experts-list solution-experts-list--side solution-experts-list--left">
+                <li class="solution-expert">
+                  <span class="solution-expert-chip"><span class="solution-expert-label">Занятия</span></span>
+                </li>
+                <li class="solution-expert">
+                  <span class="solution-expert-chip"><span class="solution-expert-label">Сон и режим</span></span>
+                </li>
+                <li class="solution-expert">
+                  <span class="solution-expert-chip"><span class="solution-expert-label">Педиатрия и врачи</span></span>
+                </li>
+                <li class="solution-expert">
+                  <span class="solution-expert-chip"><span class="solution-expert-label">Психология и поддержка</span></span>
+                </li>
+              </ul>
             <div class="solution-phone" aria-label="Пример чата MAMADO">
               <div class="solution-phone-top">
                 <div class="solution-phone-status-row">
@@ -465,7 +557,7 @@
                 </div>
               </div>
 
-              <div class="solution-phone-screen">
+              <div class="solution-phone-screen" data-phone-lead="download">
                 <div class="solution-phone-thread">
                   <div class="solution-chat-row solution-chat-row--user">
                     <span class="solution-chat-copy">
@@ -492,7 +584,42 @@
                     <span class="solution-manager-avatar solution-manager-avatar--spacer" aria-hidden="true">M</span>
                     <span class="solution-assistant-panel">
                       <span class="solution-result-card">
-                        <span class="solution-result-avatar" data-phone-card-icon>AI</span>
+                        <span class="solution-result-lead">
+                          <button
+                            type="button"
+                            class="solution-result-download"
+                            data-phone-download
+                            aria-label="Скачать план"
+                          >
+                            <span class="solution-result-download-icon-wrap">
+                              <svg
+                                class="solution-result-download-icon"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                              >
+                                <path
+                                  fill="currentColor"
+                                  d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"
+                                />
+                              </svg>
+                            </span>
+                          </button>
+                          <span class="solution-result-photo-wrap" data-phone-photo-wrap hidden>
+                            <img
+                              class="solution-result-photo"
+                              data-phone-card-photo
+                              src=""
+                              alt=""
+                              width="36"
+                              height="36"
+                              decoding="async"
+                              loading="lazy"
+                            />
+                          </span>
+                        </span>
                         <span class="solution-result-copy">
                           <span class="solution-result-title" data-phone-card-title>План сна на сегодня</span>
                           <span class="solution-result-subtitle" data-phone-card-subtitle>3 шага: режим, ритуал, мягкое укладывание</span>
@@ -535,6 +662,44 @@
                 </div>
               </div>
             </div>
+            <ul class="solution-experts-list solution-experts-list--side solution-experts-list--right">
+              <li class="solution-expert">
+                <span class="solution-expert-chip"><span class="solution-expert-label">Детское питание</span></span>
+              </li>
+              <li class="solution-expert">
+                <span class="solution-expert-chip"><span class="solution-expert-label">Нутрициология</span></span>
+              </li>
+              <li class="solution-expert">
+                <span class="solution-expert-chip"><span class="solution-expert-label">Стилист и образ</span></span>
+              </li>
+            </ul>
+            </div>
+
+            <div class="solution-experts-bundle">
+              <ul class="solution-experts-list solution-experts-list--mobile">
+                <li class="solution-expert">
+                  <span class="solution-expert-chip"><span class="solution-expert-label">Занятия</span></span>
+                </li>
+                <li class="solution-expert">
+                  <span class="solution-expert-chip"><span class="solution-expert-label">Сон и режим</span></span>
+                </li>
+                <li class="solution-expert">
+                  <span class="solution-expert-chip"><span class="solution-expert-label">Педиатрия и врачи</span></span>
+                </li>
+                <li class="solution-expert">
+                  <span class="solution-expert-chip"><span class="solution-expert-label">Психология и поддержка</span></span>
+                </li>
+                <li class="solution-expert">
+                  <span class="solution-expert-chip"><span class="solution-expert-label">Детское питание</span></span>
+                </li>
+                <li class="solution-expert">
+                  <span class="solution-expert-chip"><span class="solution-expert-label">Нутрициология</span></span>
+                </li>
+                <li class="solution-expert">
+                  <span class="solution-expert-chip"><span class="solution-expert-label">Стилист и образ</span></span>
+                </li>
+              </ul>
+            </div>
             </div>
           </div>
         </div>
@@ -543,7 +708,7 @@
       <section class="section section--questions" id="question">
         <div class="section-body section-body--questions">
           <div class="questions-head">
-            <div class="questions-kicker"><span>♥</span>Спроси что угодно</div>
+            <div class="questions-kicker">Спроси что угодно</div>
             <h2 class="questions-title">Примеры вопросов</h2>
           </div>
 
@@ -621,13 +786,13 @@
       <section class="section section--steps" id="steps">
         <div class="section-body section-body--steps">
           <div class="steps-head">
-            <div class="bottom-kicker"><span>♥</span>Как это работает</div>
+            <div class="bottom-kicker">Как это работает</div>
             <h2 class="bottom-title">Всё проще, чем кажется</h2>
           </div>
 
           <div class="steps-layout">
             <ol class="step-list" aria-label="Как это работает">
-              <li class="step-card step-card--question">
+              <li class="step-card">
                 <div class="step-caption">
                   <span class="step-number">1</span>
                   <div class="step-copy">
@@ -641,7 +806,7 @@
                   <img class="step-visual-img" src="./img/steps/s1.png" alt="" decoding="async" />
                 </div>
               </li>
-              <li class="step-card step-card--process">
+              <li class="step-card">
                 <div class="step-caption">
                   <span class="step-number">2</span>
                   <div class="step-copy">
@@ -655,7 +820,7 @@
                   <img class="step-visual-img" src="./img/steps/s2.png" alt="" decoding="async" />
                 </div>
               </li>
-              <li class="step-card step-card--manager">
+              <li class="step-card">
                 <div class="step-caption">
                   <span class="step-number">3</span>
                   <div class="step-copy">
@@ -669,7 +834,7 @@
                   <img class="step-visual-img" src="./img/steps/s-manager.png" alt="" decoding="async" />
                 </div>
               </li>
-              <li class="step-card step-card--result">
+              <li class="step-card">
                 <div class="step-caption">
                   <span class="step-number">4</span>
                   <div class="step-copy">
@@ -691,7 +856,7 @@
       <section class="section section--reviews" id="reviews">
         <div class="section-body section-body--reviews">
           <div class="reviews-head">
-            <div class="bottom-kicker"><span>♥</span>Отзывы</div>
+            <div class="bottom-kicker">Отзывы</div>
             <h2 class="bottom-title">Мамам становится спокойнее</h2>
           </div>
 
@@ -776,7 +941,7 @@
             </li>
             <li class="hero-trust-item">
               <span class="hero-trust-icon hero-trust-icon--shield">
-                <img src="./img/trust-icons/shield.svg" alt="" width="40" height="40" decoding="async" />
+                <img src="./img/trust-icons/hero-trust-verified.svg" alt="" width="40" height="40" decoding="async" />
               </span>
               <span class="hero-trust-copy">
                 <strong>Проверенные ответы</strong>
@@ -785,7 +950,7 @@
             </li>
             <li class="hero-trust-item">
               <span class="hero-trust-icon hero-trust-icon--lock">
-                <img src="./img/trust-icons/lock.svg" alt="" width="40" height="40" decoding="async" />
+                <img src="./img/trust-icons/hero-trust-confidential.svg" alt="" width="40" height="40" decoding="async" />
               </span>
               <span class="hero-trust-copy">
                 <strong>Конфиденциально</strong>
@@ -800,8 +965,8 @@
         <div class="section-body section-body--pricing">
           <article class="pricing-panel">
             <header class="pricing-head">
-              <div class="bottom-kicker pricing-kicker"><span>♥</span>Услуги</div>
-              <h2 class="pricing-heading">Без подписки. Платите только за реальные запросы.</h2>
+              <div class="bottom-kicker pricing-kicker">Услуги</div>
+              <h2 class="pricing-heading">Без подписки.<br />Платите только за реальные запросы.</h2>
               <div class="pricing-pitch">
                 <p class="pricing-pitch-line">
                   Попробуйте бесплатно – начислим первые 500 монет в подарок.
@@ -812,8 +977,8 @@
             <ul class="pricing-list" aria-label="Стоимость по типу запроса">
               <li class="price-card price-card--base">
                 <div class="price-card-header">
-                  <span class="price-icon-wrap price-icon-wrap--brand">
-                    <img class="price-icon-img" src="./img/msg-gallery/ai.svg" width="24" height="24" alt="" decoding="async" />
+                  <span class="price-icon-wrap price-icon-wrap--accent-yellow">
+                    <img class="price-icon-img" src="./img/msg-gallery/feature-ai-yellow.svg" width="24" height="24" alt="" decoding="async" />
                   </span>
                   <div class="price-head-text">
                     <h3 class="price-title">Быстрый ответ</h3>
@@ -844,8 +1009,8 @@
               <li class="price-card price-card--featured">
                 <span class="price-card-badge" aria-hidden="true"><span class="price-card-badge-icon">★</span>Лучший выбор</span>
                 <div class="price-card-header">
-                  <span class="price-icon-wrap price-icon-wrap--coral">
-                    <img class="price-icon-img" src="./img/trust-icons/heart.svg" width="24" height="24" alt="" decoding="async" />
+                  <span class="price-icon-wrap price-icon-wrap--accent-blue">
+                    <img class="price-icon-img" src="./img/msg-gallery/feature-chat-blue.svg" width="24" height="24" alt="" decoding="async" />
                   </span>
                   <div class="price-head-text">
                     <h3 class="price-title">Личный менеджер</h3>
@@ -875,8 +1040,8 @@
               </li>
               <li class="price-card price-card--expert">
                 <div class="price-card-header">
-                  <span class="price-icon-wrap price-icon-wrap--brand">
-                    <img class="price-icon-img" src="./img/trust-icons/shield.svg" width="24" height="24" alt="" decoding="async" />
+                  <span class="price-icon-wrap price-icon-wrap--accent-green">
+                    <img class="price-icon-img" src="./img/msg-gallery/feature-shield-green.svg" width="24" height="24" alt="" decoding="async" />
                   </span>
                   <div class="price-head-text">
                     <h3 class="price-title">Консультация эксперта</h3>
@@ -908,7 +1073,7 @@
 
             <p class="pricing-trust">
               <span class="pricing-trust-icon" aria-hidden="true">
-                <img src="./img/trust-icons/shield.svg" width="14" height="14" alt="" decoding="async" />
+                <img src="./img/trust-icons/shield.svg" width="24" height="24" alt="" decoding="async" />
               </span>
               <span class="pricing-trust-text">Безопасно и конфиденциально. Ваши данные под надёжной защитой</span>
             </p>
@@ -924,7 +1089,7 @@
               <div class="benefits-cta-decor benefits-cta-decor--right" aria-hidden="true"></div>
               <div class="benefits-cta-inner">
                 <div class="benefits-cta-main">
-                  <div class="bottom-kicker"><span>♥</span>Что ты получаешь</div>
+                  <div class="bottom-kicker">Что ты получаешь</div>
                   <div class="final-copy">
                     <h2 class="final-title">Попробуй уже сегодня</h2>
                     <p class="final-subtitle">Первый ответ — и ты почувствуешь разницу</p>
