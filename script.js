@@ -88,7 +88,7 @@ const solutionSlides = [
 
 const solutionTabs = Array.from(document.querySelectorAll("[data-solution-tab]"));
 const solutionItems = Array.from(document.querySelectorAll(".solution-feature"));
-const solutionTabsMobileMq = window.matchMedia("(max-width: 47.5rem)");
+const solutionTabsMobileMq = window.matchMedia("(max-width: 1120px)");
 
 function updateSolutionFeatureTabs(activeIndex) {
   if (solutionTabsMobileMq.matches) {
@@ -608,7 +608,7 @@ window.setInterval(renderSolutionPhoneClock, 30000);
   const leftList = document.querySelector(".solution-experts-list.solution-experts-list--side.solution-experts-list--left");
   if (!stage || !leftList) return;
 
-  const mqDesktop = window.matchMedia("(min-width: 47.5001rem)");
+  const mqDesktop = window.matchMedia("(min-width: 1121px)");
   const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)");
 
   /** Доля видимой высоты блока при старте/финале анимации (видно 20% стейджа): низ входа / верх выхода */
