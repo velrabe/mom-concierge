@@ -672,3 +672,18 @@ window.setInterval(renderSolutionPhoneClock, 30000);
   window.addEventListener("resize", onScrollOrResize, { passive: true });
   tick();
 })();
+
+(function initYandexMetrikaReachGoals() {
+  const COUNTER_ID = 109649722;
+  document.querySelectorAll("[data-ym-goal]").forEach((el) => {
+    el.addEventListener("click", () => {
+      const goal = el.getAttribute("data-ym-goal");
+      if (!goal || typeof ym !== "function") return;
+      try {
+        ym(COUNTER_ID, "reachGoal", goal);
+      } catch {
+        /* counter may be blocked or unavailable */
+      }
+    });
+  });
+})();
